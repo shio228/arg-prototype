@@ -9,10 +9,10 @@ export default function Footer() {
             サイトマップ
           </Link>
           <Link href="/privacy" className="text-foreground/70 hover:text-foreground transition-colors">
-            プライバシーポリシー
+            管理人とのお約束
           </Link>
         </div>
-        <p className="text-center text-sm text-muted-foreground">&copy; 2026 ARG Prototype. All rights reserved.</p>
+        <p className="text-center text-sm text-muted-foreground">&copy; 2016. All rights reserved.</p>
       </div>
     </footer>
   );
