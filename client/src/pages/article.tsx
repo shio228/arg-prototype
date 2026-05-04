@@ -1,31 +1,75 @@
 import { useRoute } from "wouter";
 import { useEffect, useState } from "react";
-import { getArticle } from "../lib/api";
+import { getArticle, getRecentArticles, getDraftArticles } from "../lib/api";
 
 export default function Article() {
   const [, params] = useRoute("/article/:id");
   const { id } = params;
 
   const [article, setArticle] = useState<any>(null);
+  const [recentArticles, setRecentArticles] = useState<any[]>([]);
+  const [draftArticles, setDraftArticles] = useState<any[]>([]);
 
   useEffect(() => {
-    getArticle(id).then(setArticle);
+  getArticle(id).then(setArticle);
+  getRecentArticles().then((data) => {
+    setRecentArticles(data);
+  });
+  getDraftArticles().then((data) => {
+    setDraftArticles(data);
+  });
   }, [id]);
 
   if (!article) return <div>Loading...</div>;
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
+    <div className="max-w-5xl mx-auto p-4">
       <img
         src={article.thumbnail}
         className="w-full h-48 object-cover mb-4"
       />
 
-      <h1 className="text-2xl font-bold">{article.title}</h1>
-      <p className="text-sm text-gray-500">{article.date}</p>
+      <div className="flex gap-8">
+        {/* 左：記事本文 */}
+        <main className="flex-1 min-w-0">
+          <h1 className="text-4xl font-bold">{article.title}</h1>
+          <p className="text-sm text-gray-500">{article.date}</p>
 
-      <div className="mt-4 whitespace-pre-line">
-        {article.content}
+          <div className="mt-4 whitespace-pre-line text-lg">
+            {article.content}
+          </div>
+        </main>
+        {/* 右：サイドバー */}
+        <aside className="w-56 shrink-0">
+          <section className="mb-6">
+            <h2 className="text-lg font-bold border-b-2 border-red-500 pb-1 mb-2">
+              最新記事
+            </h2>
+            {recentArticles.map((a) => (
+              <div key={a.id} className="flex justify-between items-baseline py-1 text-base">
+                <a href={`/article/${a.id}`} className="truncate mr-2 hover:underline">
+                  {a.title}
+                </a>
+                <span className="text-xs text-gray-400 shrink-0">{a.date}</span>
+              </div>
+            ))}
+          </section>
+
+          {/* 下書き */}
+          <section>
+            <h2 className="text-lg font-bold border-b-2 border-red-500 pb-1 mb-2">
+              下書き
+            </h2>
+            {draftArticles.map((a) => (
+              <div key={a.id} className="flex justify-between items-baseline py-1 text-base">
+                <a href={`/article/${a.id}`} className="truncate mr-2 hover:underline">
+                  {a.title}
+                </a>
+                <span className="text-xs text-gray-400 shrink-0">{a.date}</span>
+              </div>
+            ))}
+          </section>
+        </aside>
       </div>
     </div>
   );
