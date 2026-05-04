@@ -16,12 +16,14 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Sitemap from "./pages/Sitemap";
 import CipherPage from "./pages/CipherPage";
 import ClearPage from "./pages/ClearPage";
+import article from "./pages/article";
 
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/article/:id"} component={article} />
       <Route path={"/story/:id"} component={StoryPage} />
       <Route path={"/success/:id"} component={SuccessPage} />
       <Route path={"/hidden/:id"} component={HiddenPage} />
