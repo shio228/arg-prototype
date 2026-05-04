@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
+import PuzzleForm from '@/components/PuzzleForm';
 
 export default function Sitemap() {
   const pages = [
@@ -14,6 +15,9 @@ export default function Sitemap() {
     <div className="min-h-screen flex flex-col">
       <main className="flex-1">
         <article className="container max-w-2xl mx-auto py-16 px-4">
+          <div className="flex-1 max-w-md mx-auto px-4">
+            <PuzzleForm />
+          </div>
           <h1 className="text-4xl font-bold mb-8 text-foreground">サイトマップ</h1>
           
           <div className="prose prose-sm max-w-none text-foreground/90 space-y-6 mb-8">
