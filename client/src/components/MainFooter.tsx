@@ -8,7 +8,10 @@ export default function Footer() {
           <Link href="/sitemap" className="text-foreground/70 hover:text-foreground transition-colors">
             サイトマップ
           </Link>
-          <Link href="/privacy" className="text-foreground/70 hover:text-foreground transition-colors">
+          <Link href="/about" className="text-foreground/70 hover:text-foreground transition-colors">
+            このサイトについて
+          </Link>
+          <Link href="/rules" className="text-foreground/70 hover:text-foreground transition-colors">
             管理人とのお約束
           </Link>
         </div>

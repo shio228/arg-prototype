@@ -23,7 +23,7 @@ import About from "./pages/About";
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
+      
       <Route path={"/article/:id"} component={Article} />
       <Route path={"/story/:id"} component={StoryPage} />
       <Route path={"/success/:id"} component={SuccessPage} />
@@ -34,6 +34,7 @@ function Router() {
       <Route path={"/sitemap"} component={Sitemap} />
       <Route path={"/cipher"} component={CipherPage} />
       <Route path={"/clear"} component={ClearPage} />
+      <Route path={"/"} component={Home} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
@@ -57,8 +58,22 @@ function App() {
           <Toaster />
           <div className="flex flex-col min-h-screen">
             <Header />
-            <Router />
-            <MainFooter />
+
+            <main className="flex-1">
+              <Router />
+            </main>
+            
+            <Switch>
+              {/* 記事専用 */}
+              <Route path="/article/:id">
+                <ArticleFooter />
+              </Route>
+
+              {/* メインページ用 */}
+              <Route>
+                <MainFooter />
+              </Route>
+            </Switch>
           </div>
         </TooltipProvider>
       </ThemeProvider>
