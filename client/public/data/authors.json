@@ -1,0 +1,20 @@
+[
+  {
+    "id": "a001",
+    "name": "七不思議収集家",
+    "icon": "/images/authors/a001.png",
+    "bio": "各地の都市伝説を収集しているブロガー。"
+  },
+  {
+    "id": "a002",
+    "name": "深夜観測者",
+    "icon": "/images/authors/a002.png",
+    "bio": "深夜にしか起きない現象を記録している。"
+  },
+  {
+    "id": "a003",
+    "name": "匿名投稿者",
+    "icon": "/images/authors/unknown.png",
+    "bio": "詳細不明。投稿履歴に一貫性がない。"
+  }
+]
