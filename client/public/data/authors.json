@@ -3,18 +3,21 @@
     "id": "a001",
     "name": "七不思議収集家",
     "icon": "/images/authors/a001.png",
-    "bio": "各地の都市伝説を収集しているブロガー。"
+    "bio": "各地の都市伝説を収集しているブロガー。",
+    "passwordHash": "2a3131742abf467d4fc7eaf921695c91a86705a8f2940377f2bd0214e2baa071"
   },
   {
     "id": "a002",
     "name": "深夜観測者",
     "icon": "/images/authors/a002.png",
-    "bio": "深夜にしか起きない現象を記録している。"
+    "bio": "深夜にしか起きない現象を記録している。",
+    "passwordHash": "1a78f0d147be2a5f1fd3418473cd9b3c110d0ecc6bb91dd93e422816795e7aa9"
   },
   {
     "id": "a003",
     "name": "匿名投稿者",
     "icon": "/images/authors/unknown.png",
-    "bio": "詳細不明。投稿履歴に一貫性がない。"
+    "bio": "詳細不明。投稿履歴に一貫性がない。",
+    "passwordHash": "fb23f26c2f3de969c426823b47069ecfebacc1bcd4e8517235aee9fb3ffc9f4d"
   }
 ]
