@@ -1,5 +1,5 @@
 export async function getArticles() {
-  const res = await fetch("/data/articles/index.json");
+  const res = await fetch("/data/index.json");
   return res.json();
 }
 

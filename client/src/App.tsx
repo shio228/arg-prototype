@@ -13,7 +13,7 @@ import SuccessPage from "./pages/SuccessPage";
 import HiddenPage from "./pages/HiddenPage";
 import FailurePage from "./pages/FailurePage";
 import Rules from "./pages/Rules";
-import Sitemap from "./pages/Sitemap";
+import ArticleSearch from "./pages/ArticleSearch";
 import CipherPage from "./pages/CipherPage";
 import ClearPage from "./pages/ClearPage";
 import Article from "./pages/article";
@@ -31,7 +31,7 @@ function Router() {
       <Route path={"/failure"} component={FailurePage} />
       <Route path={"/rules"} component={Rules} />
       <Route path={"/about"} component={About} />
-      <Route path={"/sitemap"} component={Sitemap} />
+      <Route path={"/articleSearch"} component={ArticleSearch} />
       <Route path={"/cipher"} component={CipherPage} />
       <Route path={"/clear"} component={ClearPage} />
       <Route path={"/"} component={Home} />

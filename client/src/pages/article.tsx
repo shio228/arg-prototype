@@ -9,15 +9,22 @@ export default function Article() {
   const [article, setArticle] = useState<any>(null);
   const [recentArticles, setRecentArticles] = useState<any[]>([]);
   const [draftArticles, setDraftArticles] = useState<any[]>([]);
+  const [authors, setAuthors] = useState<any[]>([]);
 
   useEffect(() => {
-  getArticle(id).then(setArticle);
-  getRecentArticles().then((data) => {
-    setRecentArticles(data);
-  });
-  getDraftArticles().then((data) => {
-    setDraftArticles(data);
-  });
+    // authors取得
+    fetch("/data/authors.json")
+      .then(res => res.json())
+      .then(setAuthors);
+
+    // 記事取得
+    getArticle(id).then(setArticle);
+    getRecentArticles().then((data) => {
+      setRecentArticles(data);
+    });
+    getDraftArticles().then((data) => {
+      setDraftArticles(data);
+    });
   }, [id]);
 
   if (!article) return <div>Loading...</div>;
@@ -45,7 +52,7 @@ export default function Article() {
             <h2 className="text-lg font-bold border-b-2 border-red-500 pb-1 mb-2">
               最新記事
             </h2>
-            {recentArticles.map((a) => (
+            {recentArticles.filter((a) => a.authorId === article.authorId).map((a) => (
               <div key={a.id} className="flex justify-between items-baseline py-1 text-base">
                 <a href={`/article/${a.id}`} className="truncate mr-2 hover:underline">
                   {a.title}
@@ -60,7 +67,7 @@ export default function Article() {
             <h2 className="text-lg font-bold border-b-2 border-red-500 pb-1 mb-2">
               下書き
             </h2>
-            {draftArticles.map((a) => (
+            {draftArticles.filter((a) => a.authorId === article.authorId).map((a) => (
               <div key={a.id} className="flex justify-between items-baseline py-1 text-base">
                 <a href={`/article/${a.id}`} className="truncate mr-2 hover:underline">
                   {a.title}
