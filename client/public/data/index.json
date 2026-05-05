@@ -4,34 +4,44 @@
     "title": "トンネルの向こう側",
     "date": "2026-05-04",
     "status": "published",
-    "authorId": "a001"
+    "authorId": "a001",
+    "views": 120,
+    "recommended": true
   },
   {
     "id": 2,
     "title": "消えるエレベーター",
     "date": "2026-05-03",
     "status": "draft",
-    "authorId": "a002"
+    "authorId": "a002",
+    "views": 0,
+    "recommended": false
   },
   {
     "id": 3,
     "title": "鏡の中の遅延",
     "date": "2026-05-02",
     "status": "published",
-    "authorId": "a001"
+    "authorId": "a001",
+    "views": 120,
+    "recommended": true
   },
   {
     "id": 4,
     "title": "誰もいない放送室",
     "date": "2026-05-01",
     "status": "published",
-    "authorId": "a002"
+    "authorId": "a002",
+    "views": 10,
+    "recommended": true
   },
   {
     "id": 5,
     "title": "消えない通知",
     "date": "2026-04-30",
     "status": "published",
-    "authorId": "a003"
+    "authorId": "a003",
+    "views": 11,
+    "recommended": false
   }
 ]
