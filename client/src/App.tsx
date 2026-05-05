@@ -5,31 +5,32 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import MainFooter from "./components/MainFooter";
+import ArticleFooter from "./components/ArticleFooter";
 import Home from "./pages/Home";
 import StoryPage from "./pages/StoryPage";
 import SuccessPage from "./pages/SuccessPage";
 import HiddenPage from "./pages/HiddenPage";
 import FailurePage from "./pages/FailurePage";
-import Contact from "./pages/Contact";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Rules from "./pages/Rules";
 import Sitemap from "./pages/Sitemap";
 import CipherPage from "./pages/CipherPage";
 import ClearPage from "./pages/ClearPage";
-import article from "./pages/article";
+import Article from "./pages/article";
+import About from "./pages/About";
 
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
-      <Route path={"/article/:id"} component={article} />
+      <Route path={"/article/:id"} component={Article} />
       <Route path={"/story/:id"} component={StoryPage} />
       <Route path={"/success/:id"} component={SuccessPage} />
       <Route path={"/hidden/:id"} component={HiddenPage} />
       <Route path={"/failure"} component={FailurePage} />
-      <Route path={"/contact"} component={Contact} />
-      <Route path={"/privacy"} component={PrivacyPolicy} />
+      <Route path={"/rules"} component={Rules} />
+      <Route path={"/about"} component={About} />
       <Route path={"/sitemap"} component={Sitemap} />
       <Route path={"/cipher"} component={CipherPage} />
       <Route path={"/clear"} component={ClearPage} />
@@ -57,7 +58,7 @@ function App() {
           <div className="flex flex-col min-h-screen">
             <Header />
             <Router />
-            <Footer />
+            <MainFooter />
           </div>
         </TooltipProvider>
       </ThemeProvider>
