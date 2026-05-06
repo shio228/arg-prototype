@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
@@ -161,10 +161,36 @@ function RegisterDialog({ open, onClose }: { open: boolean; onClose: () => void 
   );
 }
 
+const SESSION_KEY = 'loggedInAuthorId';
+
+async function restoreAuthor(): Promise<Author | null> {
+  const savedId = sessionStorage.getItem(SESSION_KEY);
+  if (!savedId) return null;
+  const res = await fetch('/data/authors.json');
+  const authors: Author[] = await res.json();
+  return authors.find((a) => a.id === savedId) ?? null;
+}
+
 export default function Header() {
   const [loginOpen, setLoginOpen] = useState(false);
   const [registerOpen, setRegisterOpen] = useState(false);
   const [loggedInAuthor, setLoggedInAuthor] = useState<Author | null>(null);
+
+  useEffect(() => {
+    restoreAuthor().then((author) => {
+      if (author) setLoggedInAuthor(author);
+    });
+  }, []);
+
+  const handleLoginSuccess = (author: Author) => {
+    sessionStorage.setItem(SESSION_KEY, author.id);
+    setLoggedInAuthor(author);
+  };
+
+  const handleLogout = () => {
+    sessionStorage.removeItem(SESSION_KEY);
+    setLoggedInAuthor(null);
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background border-b border-border">
@@ -193,7 +219,13 @@ export default function Header() {
                 </PopoverTrigger>
                 <PopoverContent className="w-48 p-3" align="end">
                   <p className="text-xs text-muted-foreground mb-1">ログインID</p>
-                  <p className="text-sm font-medium">{loggedInAuthor.id}</p>
+                  <p className="text-sm font-medium mb-3">{loggedInAuthor.id}</p>
+                  <button
+                    onClick={handleLogout}
+                    className="w-full text-sm text-red-500 hover:text-red-600 border border-red-300 rounded px-3 py-1.5 hover:bg-red-50 transition-colors"
+                  >
+                    ログアウト
+                  </button>
                 </PopoverContent>
               </Popover>
             </>
@@ -225,7 +257,7 @@ export default function Header() {
       <LoginDialog
         open={loginOpen}
         onClose={() => setLoginOpen(false)}
-        onLoginSuccess={setLoggedInAuthor}
+        onLoginSuccess={handleLoginSuccess}
       />
       <RegisterDialog open={registerOpen} onClose={() => setRegisterOpen(false)} />
     </header>
