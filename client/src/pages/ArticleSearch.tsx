@@ -46,7 +46,7 @@ export default function ArticleSearch() {
       <ul className="space-y-3">
         {articles.map((a) => (
           <li key={a.id} className="border-b border-border pb-3">
-            <a href={`/article/${a.id}`} className="text-base font-medium hover:underline">
+            <a href={`/article/${a.id}`} className="text-base text-blue-700 underline hover:text-blue-900 visited:text-purple-700">
               {a.title}
             </a>
             <p className="text-xs text-muted-foreground mt-0.5">{a.date}</p>

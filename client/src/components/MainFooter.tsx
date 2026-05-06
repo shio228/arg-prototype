@@ -27,10 +27,10 @@ export default function Footer() {
           </div>
 
           <div className="flex-1 flex justify-center gap-6 text-sm pt-7">
-            <Link href="/about" className="text-foreground/70 hover:text-foreground transition-colors">
+            <Link href="/about" className="text-foreground/70 text-blue-700 underline hover:text-blue-900 visited:text-purple-700">
               このサイトについて
             </Link>
-            <Link href="/rules" className="text-foreground/70 hover:text-foreground transition-colors">
+            <Link href="/rules" className="text-foreground/70 text-blue-700 underline hover:text-blue-900 visited:text-purple-700">
               管理人とのお約束
             </Link>
           </div>
