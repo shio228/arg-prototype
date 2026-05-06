@@ -8,7 +8,6 @@ import Header from "./components/Header";
 import MainFooter from "./components/MainFooter";
 import ArticleFooter from "./components/ArticleFooter";
 import Home from "./pages/Home";
-import FailurePage from "./pages/FailurePage";
 import Rules from "./pages/Rules";
 import ArticleSearch from "./pages/ArticleSearch";
 import Article from "./pages/article";
@@ -20,7 +19,6 @@ function Router() {
     <Switch>
       
       <Route path={"/article/:id"} component={Article} />
-      <Route path={"/failure"} component={FailurePage} />
       <Route path={"/rules"} component={Rules} />
       <Route path={"/about"} component={About} />
       <Route path={"/articleSearch"} component={ArticleSearch} />
