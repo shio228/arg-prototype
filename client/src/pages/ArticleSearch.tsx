@@ -68,7 +68,7 @@ export default function ArticleSearch() {
               onValueChange={(v) => setActiveTab(v as Tab)}
               className="mt-6"
             >
-              <TabsList className="w-full">
+              <TabsList className="w-full bg-transparent border-b border-border rounded-none p-0 h-auto gap-0">
                 <TabsTrigger value="list" className="flex-1" onClick={() => { setSearched(false); setSearchQuery(''); }}>一覧</TabsTrigger>
                 <TabsTrigger value="ranking" className="flex-1" onClick={() => { setSearched(false); setSearchQuery(''); }}>ランキング</TabsTrigger>
                 <TabsTrigger value="recommended" className="flex-1" onClick={() => { setSearched(false); setSearchQuery(''); }}>おすすめ</TabsTrigger>
