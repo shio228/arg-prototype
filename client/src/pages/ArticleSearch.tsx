@@ -69,9 +69,9 @@ export default function ArticleSearch() {
               className="mt-6"
             >
               <TabsList className="w-full">
-                <TabsTrigger value="list" className="flex-1">一覧</TabsTrigger>
-                <TabsTrigger value="ranking" className="flex-1">ランキング</TabsTrigger>
-                <TabsTrigger value="recommended" className="flex-1">おすすめ</TabsTrigger>
+                <TabsTrigger value="list" className="flex-1" onClick={() => { setSearched(false); setSearchQuery(''); }}>一覧</TabsTrigger>
+                <TabsTrigger value="ranking" className="flex-1" onClick={() => { setSearched(false); setSearchQuery(''); }}>ランキング</TabsTrigger>
+                <TabsTrigger value="recommended" className="flex-1" onClick={() => { setSearched(false); setSearchQuery(''); }}>おすすめ</TabsTrigger>
               </TabsList>
 
               <TabsContent value="list" className="mt-4">
