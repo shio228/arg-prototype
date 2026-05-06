@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 
-export default function PrivacyPolicy() {
+export default function Rules() {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1">

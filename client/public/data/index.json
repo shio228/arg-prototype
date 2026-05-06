@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "title": "トンネルの向こう側",
-    "date": "2026-05-04",
+    "title": "初投稿！〇〇トンネル",
+    "date": "2026-05-01",
     "status": "published",
     "authorId": "a001",
     "views": 120,
@@ -10,17 +10,19 @@
   },
   {
     "id": 2,
-    "title": "消えるエレベーター",
-    "date": "2026-05-03",
-    "status": "draft",
-    "authorId": "a002",
+    "title": "【合言葉成功！】交流記事です！自己紹介も！！",
+    "date": "2026-05-02",
+    "status": "published",
+    "authorId": "a001",
     "views": 0,
-    "recommended": false
+    "recommended": false,
+    "hidden": true,
+    "searchKeyword": "（架空の固有名詞）トンネル"
   },
   {
     "id": 3,
-    "title": "鏡の中の遅延",
-    "date": "2026-05-02",
+    "title": "オカルトネタ2本目！！！！",
+    "date": "2026-05-03",
     "status": "published",
     "authorId": "a001",
     "views": 120,
@@ -29,7 +31,7 @@
   {
     "id": 4,
     "title": "誰もいない放送室",
-    "date": "2026-05-01",
+    "date": "2026-05-03",
     "status": "published",
     "authorId": "a002",
     "views": 10,
@@ -96,7 +98,7 @@
     "title": "消える横断歩道",
     "date": "2026-04-24",
     "status": "published",
-    "authorId": "a001",
+    "authorId": "a003",
     "views": 18,
     "recommended": false
   },

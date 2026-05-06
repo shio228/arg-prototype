@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 
-export default function PrivacyPolicy() {
+export default function About() {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1">
@@ -10,58 +10,46 @@ export default function PrivacyPolicy() {
           
           <div className="prose prose-sm max-w-none text-foreground/90 space-y-6">
             <section>
-              <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">1. 個人情報の取得について</h2>
+              <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">■はじめまして！！！</h2>
               <p>
-                ARGプロトタイプサイト（以下「本サイト」）では、お問い合わせフォームを通じて、お名前、メールアドレス、その他の個人情報をお預かりすることがあります。これらの情報は、お客様のご同意のもとでのみ取得されます。
+              「都市伝説同好会」管理人の『管理人』です！（気の利いた名前が思いつかなくてそのままです笑）
+              </p>
+
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">■ このサイトの目的</h2>
+              <p>
+                ここは、都市伝説やオカルト、不思議な話が大好きな人たちが集まる秘密の遊び場です！<br />
+                ネットの噂、地元の怪談、廃墟の探索レポートなどなど……みんなでたくさんの情報を持ち寄って、記事を読み合ったり、楽しく交流しましょう！<br />
+                怖い話が苦手な人も大丈夫。ここではみんな「仲間」だから、絶対に安心ですよ。
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">2. 個人情報の利用目的</h2>
+              <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">■ ちょっと特殊な「検索窓」の使い方</h2>
               <p>
-                取得した個人情報は、以下の目的でのみ利用されます：
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>お問い合わせへの対応</li>
-                <li>サービスの改善と向上</li>
-                <li>ユーザーサポートの提供</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">3. 個人情報の保護</h2>
-              <p>
-                本サイトは、お預かりした個人情報を厳重に保護いたします。個人情報は、本人の同意なく第三者に開示・提供することはありません。
+                当サイトの検索窓ですが、普通の記事検索のほかに「合言葉マッチ」という特別機能を搭載しています！<br />
+                実は、「特定のキーワード（合言葉）」を知っている人だけが読めるシークレット記事を投稿者さんが設定できるようにしてあるんです。<br />
+                公開されている記事の中に隠された不自然な言葉や、謎解きの答えを検索窓に入力すると……普段は見えない秘密のページに繋がるかも！？<br />
+                宝探し感覚でサイトの隅々まで読んでみてくださいね。
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">4. クッキーについて</h2>
+              <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">■ 新規登録について（重要！）</h2>
               <p>
-                本サイトでは、ユーザーエクスペリエンスの向上を目的として、クッキーを使用することがあります。クッキーは、個人を特定する情報を含まないものです。
+                現在、海外からのスパム書き込みが増えてしまったため、一時的に合言葉がなければ新規登録ができないよう設定してるんです……ごめんなさい！<br />
+                でも、せっかくこの「このサイトについて」を最後まで読んでくれた熱心なあなたには、特別に新規登録用のゲートをお教えしちゃいます！<br />
+                あなたみたいなオカルト好きの方と、もっともっと深く繋がりたいんです。<br />
+                ↓合言葉が入力済みの特別リンクはこちら！↓<br />
+                <a href="NotFound.tsx">[＞＞特別新規登録ゲートへ進む＜＜]</a>（※プレイヤーがクリックすると「404 Not Found」エラーページに飛ぶ）<br />
+                ぜひ登録して、私たちの「仲間」になってくださいね。<br />
+                ずっと、お待ちしています！<br />
+                2026年　追記：新規登録者さんだけに伝わる方法で、私たちの新しい遊び場をご連絡いたします。合言葉を見つけてください。
               </p>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">5. 外部サービスの利用</h2>
-              <p>
-                本サイトは、分析やマーケティングの目的で、外部サービスを利用することがあります。これらのサービスは、独自のプライバシーポリシーに従って個人情報を取り扱います。
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">6. ポリシーの変更</h2>
-              <p>
-                本プライバシーポリシーは、予告なく変更される可能性があります。変更があった場合は、本サイトに掲載いたします。
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">7. お問い合わせ</h2>
-              <p>
-                本プライバシーポリシーに関するご質問やご懸念がございましたら、お問い合わせページからご連絡ください。
-              </p>
-            </section>
           </div>
 
           <div className="mt-12 pt-8 border-t border-border space-y-3">
