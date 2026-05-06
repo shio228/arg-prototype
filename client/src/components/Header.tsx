@@ -185,11 +185,13 @@ export default function Header() {
   const handleLoginSuccess = (author: Author) => {
     sessionStorage.setItem(SESSION_KEY, author.id);
     setLoggedInAuthor(author);
+    window.dispatchEvent(new Event('auth-changed'));
   };
 
   const handleLogout = () => {
     sessionStorage.removeItem(SESSION_KEY);
     setLoggedInAuthor(null);
+    window.dispatchEvent(new Event('auth-changed'));
   };
 
   return (

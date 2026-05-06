@@ -2,6 +2,8 @@ import { useRoute } from "wouter";
 import { useEffect, useState } from "react";
 import { getArticle, getRecentArticles, getDraftArticles } from "../lib/api";
 
+const SESSION_KEY = 'loggedInAuthorId';
+
 export default function Article() {
   const [, params] = useRoute("/article/:id");
   const { id } = params;
@@ -10,6 +12,13 @@ export default function Article() {
   const [recentArticles, setRecentArticles] = useState<any[]>([]);
   const [draftArticles, setDraftArticles] = useState<any[]>([]);
   const [authors, setAuthors] = useState<any[]>([]);
+  const [isLoggedIn, setIsLoggedIn] = useState(!!sessionStorage.getItem(SESSION_KEY));
+
+  useEffect(() => {
+    const handler = () => setIsLoggedIn(!!sessionStorage.getItem(SESSION_KEY));
+    window.addEventListener('auth-changed', handler);
+    return () => window.removeEventListener('auth-changed', handler);
+  }, []);
 
   useEffect(() => {
     // authors取得
@@ -62,20 +71,22 @@ export default function Article() {
             ))}
           </section>
 
-          {/* 下書き */}
-          <section>
-            <h2 className="text-lg font-bold border-b-2 border-red-500 pb-1 mb-2">
-              下書き
-            </h2>
-            {draftArticles.filter((a) => a.authorId === article.authorId).map((a) => (
-              <div key={a.id} className="flex justify-between items-baseline py-1 text-base">
-                <a href={`/article/${a.id}`} className="truncate mr-2 hover:underline">
-                  {a.title}
-                </a>
-                <span className="text-xs text-gray-400 shrink-0">{a.date}</span>
-              </div>
-            ))}
-          </section>
+          {/* 下書き（ログイン時のみ） */}
+          {isLoggedIn && (
+            <section>
+              <h2 className="text-lg font-bold border-b-2 border-red-500 pb-1 mb-2">
+                下書き
+              </h2>
+              {draftArticles.filter((a) => a.authorId === article.authorId).map((a) => (
+                <div key={a.id} className="flex justify-between items-baseline py-1 text-base">
+                  <a href={`/article/${a.id}`} className="truncate mr-2 hover:underline">
+                    {a.title}
+                  </a>
+                  <span className="text-xs text-gray-400 shrink-0">{a.date}</span>
+                </div>
+              ))}
+            </section>
+          )}
         </aside>
       </div>
     </div>
