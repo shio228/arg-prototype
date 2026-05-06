@@ -43,5 +43,95 @@
     "authorId": "a003",
     "views": 11,
     "recommended": false
+  },
+  {
+    "id": 6,
+    "title": "13番目の扉",
+    "date": "2026-04-29",
+    "status": "published",
+    "authorId": "a001",
+    "views": 34,
+    "recommended": false
+  },
+  {
+    "id": 7,
+    "title": "逆再生の足音",
+    "date": "2026-04-28",
+    "status": "published",
+    "authorId": "a002",
+    "views": 52,
+    "recommended": true
+  },
+  {
+    "id": 8,
+    "title": "存在しない最終電車",
+    "date": "2026-04-27",
+    "status": "draft",
+    "authorId": "a002",
+    "views": 0,
+    "recommended": false
+  },
+  {
+    "id": 9,
+    "title": "空白の監視カメラ",
+    "date": "2026-04-26",
+    "status": "published",
+    "authorId": "a003",
+    "views": 21,
+    "recommended": false
+  },
+  {
+    "id": 10,
+    "title": "午前3時の着信",
+    "date": "2026-04-25",
+    "status": "published",
+    "authorId": "a003",
+    "views": 65,
+    "recommended": true
+  },
+  {
+    "id": 11,
+    "title": "消える横断歩道",
+    "date": "2026-04-24",
+    "status": "published",
+    "authorId": "a001",
+    "views": 18,
+    "recommended": false
+  },
+  {
+    "id": 12,
+    "title": "閉じないブラウザタブ",
+    "date": "2026-04-23",
+    "status": "draft",
+    "authorId": "a003",
+    "views": 0,
+    "recommended": false
+  },
+  {
+    "id": 13,
+    "title": "録音されない声",
+    "date": "2026-04-22",
+    "status": "published",
+    "authorId": "a002",
+    "views": 43,
+    "recommended": true
+  },
+  {
+    "id": 14,
+    "title": "書き換えられる日記",
+    "date": "2026-04-21",
+    "status": "published",
+    "authorId": "a001",
+    "views": 27,
+    "recommended": false
+  },
+  {
+    "id": 15,
+    "title": "存在しないログイン履歴",
+    "date": "2026-04-20",
+    "status": "published",
+    "authorId": "a003",
+    "views": 39,
+    "recommended": true
   }
 ]
