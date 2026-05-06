@@ -8,17 +8,16 @@ export async function getArticle(id: string) {
   return res.json();
 }
 
-export async function getRecentArticles(limit = 5) {
+export async function getRecentArticles(authorId: string) {
   const articles = await getArticles();
   return articles
-    .filter((a: any) => a.status === "published")
-    .sort((a: any, b: any) => b.date.localeCompare(a.date))
-    .slice(0, limit);
+    .filter((a: any) => a.status === "published" && a.authorId === authorId)
+    .sort((a: any, b: any) => b.date.localeCompare(a.date));
 }
 
-export async function getDraftArticles() {
+export async function getDraftArticles(authorId: string) {
   const articles = await getArticles();
   return articles
-    .filter((a: any) => a.status === "draft")
+    .filter((a: any) => a.status === "draft" && a.authorId === authorId)
     .sort((a: any, b: any) => b.date.localeCompare(a.date));
 }

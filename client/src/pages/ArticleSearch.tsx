@@ -14,7 +14,7 @@ export default function ArticleSearch() {
 
   useEffect(() => {
     getArticles().then((data) => {
-      const pub = data.filter((a: any) => a.status === 'published');
+      const pub = data.filter((a: any) => a.status === 'published' && !a.hidden);
       setAllPublished(pub);
     });
   }, []);

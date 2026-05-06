@@ -18,10 +18,14 @@ export default function SearchForm({ onSearch }: SearchFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const q = query.trim().toLowerCase();
+    const q = query.trim();
     if (!q) return;
-    const results = allArticles.filter((a) => a.title.toLowerCase().includes(q));
-    onSearch?.(query.trim(), results);
+    const qLower = q.toLowerCase();
+    const results = allArticles.filter((a) => {
+      if (a.hidden) return a.searchKeyword === q;
+      return a.title.toLowerCase().includes(qLower);
+    });
+    onSearch?.(q, results);
   };
 
   return (

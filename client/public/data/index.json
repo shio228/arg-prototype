@@ -51,7 +51,9 @@
     "status": "published",
     "authorId": "a001",
     "views": 34,
-    "recommended": false
+    "recommended": false,
+    "hidden": true,
+    "searchKeyword": "13番目の扉"
   },
   {
     "id": 7,
@@ -123,7 +125,9 @@
     "status": "published",
     "authorId": "a001",
     "views": 27,
-    "recommended": false
+    "recommended": false,
+    "hidden": true,
+    "searchKeyword": "書き換えられる日記"
   },
   {
     "id": 15,
@@ -132,6 +136,8 @@
     "status": "published",
     "authorId": "a003",
     "views": 39,
-    "recommended": true
+    "recommended": true,
+    "hidden": true,
+    "searchKeyword": "存在しない"
   }
 ]
