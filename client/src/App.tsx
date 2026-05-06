@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useRoute } from "wouter";
+
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Header from "./components/Header";
@@ -35,6 +36,20 @@ function Router() {
 //   to keep consistent foreground/background color across components
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
+function ConditionalHeader() {
+  const [isHome] = useRoute('/');
+  if (isHome) return null;
+  return <Header />;
+}
+
+function ConditionalFooter() {
+  const [isHome] = useRoute('/');
+  const [isArticle] = useRoute('/article/:id');
+  if (isHome) return null;
+  if (isArticle) return <ArticleFooter />;
+  return <MainFooter />;
+}
+
 function App() {
   return (
     <ErrorBoundary>
@@ -45,23 +60,11 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <div className="flex flex-col min-h-screen">
-            <Header />
-
+            <ConditionalHeader />
             <main className="flex-1">
               <Router />
             </main>
-            
-            <Switch>
-              {/* 記事専用 */}
-              <Route path="/article/:id">
-                <ArticleFooter />
-              </Route>
-
-              {/* メインページ用 */}
-              <Route>
-                <MainFooter />
-              </Route>
-            </Switch>
+            <ConditionalFooter />
           </div>
         </TooltipProvider>
       </ThemeProvider>
