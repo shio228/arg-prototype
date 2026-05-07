@@ -48,12 +48,12 @@ export default function ArticleSearch() {
       <ul className="space-y-8">
         {articles.map((a) => (
           <li key={a.id} className="border-b border-border pb-8">
-            <a href={`/article/${a.id}`} className="flex items-center gap-3 hover:opacity-80">
+            <a href={`/article/${a.id}`} className="flex items-center gap-3 hover:opacity-80 text-blue-700 visited:text-purple-700">
               {a.thumbnail && (
                 <img src={a.thumbnail} alt={a.title} className="w-48 h-36 object-cover shrink-0" />
               )}
               <div>
-                <p className="text-xl text-blue-700 underline hover:text-blue-900 visited:text-purple-700">{a.title}</p>
+                <p className="text-xl underline hover:text-blue-900">{a.title}</p>
                 <p className="text-base text-muted-foreground mt-0.5">{a.date}</p>
               </div>
             </a>
