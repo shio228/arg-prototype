@@ -1,6 +1,7 @@
 import { useRoute } from "wouter";
 import { useEffect, useState } from "react";
 import { getArticle, getRecentArticles, getDraftArticles } from "../lib/api";
+import ReactMarkdown from "react-markdown";
 
 const SESSION_KEY = 'loggedInAuthorId';
 const SESSION_DATE_KEY = 'registeredDate';
@@ -69,8 +70,8 @@ export default function Article() {
           <h1 className="text-4xl font-bold">{article.title}</h1>
           <p className="text-sm text-gray-500">{displayDate(article.date)}</p>
 
-          <div className="mt-4 whitespace-pre-line text-lg">
-            {article.content}
+          <div className="mt-4 text-lg prose prose-neutral max-w-none">
+            <ReactMarkdown>{article.content}</ReactMarkdown>
           </div>
         </main>
         {/* 右：サイドバー */}
