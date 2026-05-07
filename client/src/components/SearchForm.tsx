@@ -1,27 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { getArticles } from '@/lib/api';
 
 interface SearchFormProps {
+  articles: any[];
   onSearch?: (query: string, results: any[]) => void;
 }
 
-export default function SearchForm({ onSearch }: SearchFormProps) {
+export default function SearchForm({ articles, onSearch }: SearchFormProps) {
   const [query, setQuery] = useState('');
-  const [allArticles, setAllArticles] = useState<any[]>([]);
-
-  useEffect(() => {
-    getArticles().then(setAllArticles);
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const q = query.trim();
     if (!q) return;
     const qLower = q.toLowerCase();
-    const results = allArticles.filter((a) => {
+    const results = articles.filter((a) => {
       if (a.hidden) return a.searchKeyword === q;
       return a.title.toLowerCase().includes(qLower);
     });
