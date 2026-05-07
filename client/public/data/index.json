@@ -6,7 +6,8 @@
     "status": "published",
     "authorId": "a001",
     "views": 120,
-    "recommended": true
+    "recommended": true,
+    "thumbnail": "/images/tunnel.png"
   },
   {
     "id": 2,
@@ -26,7 +27,8 @@
     "status": "published",
     "authorId": "a001",
     "views": 120,
-    "recommended": true
+    "recommended": true,
+    "thumbnail": "/images/mirror.jpg"
   },
   {
     "id": 4,
@@ -35,7 +37,8 @@
     "status": "published",
     "authorId": "a002",
     "views": 10,
-    "recommended": true
+    "recommended": true,
+    "thumbnail": "/images/school.jpg"
   },
   {
     "id": 5,
@@ -44,7 +47,8 @@
     "status": "published",
     "authorId": "a003",
     "views": 11,
-    "recommended": false
+    "recommended": false,
+    "thumbnail": "/images/phone.jpg"
   },
   {
     "id": 6,
@@ -55,7 +59,8 @@
     "views": 34,
     "recommended": false,
     "hidden": true,
-    "searchKeyword": "13番目の扉"
+    "searchKeyword": "13番目の扉",
+    "thumbnail": "/images/door.jpg"
   },
   {
     "id": 7,
@@ -64,7 +69,8 @@
     "status": "published",
     "authorId": "a002",
     "views": 52,
-    "recommended": true
+    "recommended": true,
+    "thumbnail": "/images/footsteps.jpg"
   },
   {
     "id": 8,
@@ -73,7 +79,8 @@
     "status": "draft",
     "authorId": "a002",
     "views": 0,
-    "recommended": false
+    "recommended": false,
+    "thumbnail": "/images/train.jpg"
   },
   {
     "id": 9,
@@ -82,7 +89,8 @@
     "status": "published",
     "authorId": "a003",
     "views": 21,
-    "recommended": false
+    "recommended": false,
+    "thumbnail": "/images/camera.jpg"
   },
   {
     "id": 10,
@@ -91,7 +99,8 @@
     "status": "published",
     "authorId": "a003",
     "views": 65,
-    "recommended": true
+    "recommended": true,
+    "thumbnail": "/images/phone2.jpg"
   },
   {
     "id": 11,
@@ -100,7 +109,8 @@
     "status": "published",
     "authorId": "a003",
     "views": 18,
-    "recommended": false
+    "recommended": false,
+    "thumbnail": "/images/crosswalk.jpg"
   },
   {
     "id": 12,
@@ -109,7 +119,8 @@
     "status": "draft",
     "authorId": "a003",
     "views": 0,
-    "recommended": false
+    "recommended": false,
+    "thumbnail": "/images/browser.jpg"
   },
   {
     "id": 13,
@@ -118,7 +129,8 @@
     "status": "published",
     "authorId": "a002",
     "views": 43,
-    "recommended": true
+    "recommended": true,
+    "thumbnail": "/images/recorder.jpg"
   },
   {
     "id": 14,
@@ -129,7 +141,8 @@
     "views": 27,
     "recommended": false,
     "hidden": true,
-    "searchKeyword": "書き換えられる日記"
+    "searchKeyword": "書き換えられる日記",
+    "thumbnail": "/images/diary.jpg"
   },
   {
     "id": 15,
@@ -140,6 +153,7 @@
     "views": 39,
     "recommended": true,
     "hidden": true,
-    "searchKeyword": "存在しない"
+    "searchKeyword": "存在しない",
+    "thumbnail": "/images/login.jpg"
   }
 ]
