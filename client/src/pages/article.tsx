@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 import { getArticle, getRecentArticles, getDraftArticles } from "../lib/api";
 
 const SESSION_KEY = 'loggedInAuthorId';
+const SESSION_DATE_KEY = 'registeredDate';
+
+const displayDate = (date: string) =>
+  date || sessionStorage.getItem(SESSION_DATE_KEY) || '';
 
 export default function Article() {
   const [, params] = useRoute("/article/:id");
@@ -45,7 +49,7 @@ export default function Article() {
         {/* 左：記事本文 */}
         <main className="flex-1 min-w-0">
           <h1 className="text-4xl font-bold">{article.title}</h1>
-          <p className="text-sm text-gray-500">{article.date}</p>
+          <p className="text-sm text-gray-500">{displayDate(article.date)}</p>
 
           <div className="mt-4 whitespace-pre-line text-lg">
             {article.content}
@@ -57,12 +61,12 @@ export default function Article() {
             <h2 className="text-lg font-bold border-b-2 border-red-500 pb-1 mb-2">
               最新記事
             </h2>
-            {recentArticles.filter((a) => loggedInAuthorId === article.authorId || !a.hidden).map((a) => (
+            {recentArticles.filter((a) => a.date && (loggedInAuthorId === article.authorId || !a.hidden)).map((a) => (
               <div key={a.id} className="flex justify-between items-baseline py-1 text-base">
                 <a href={`/article/${a.id}`} className="truncate mr-2 hover:underline">
                   {a.title}
                 </a>
-                <span className="text-xs text-gray-400 shrink-0">{a.date}</span>
+                <span className="text-xs text-gray-400 shrink-0">{displayDate(a.date)}</span>
               </div>
             ))}
           </section>
@@ -78,7 +82,7 @@ export default function Article() {
                   <a href={`/article/${a.id}`} className="truncate mr-2 hover:underline">
                     {a.title}
                   </a>
-                  <span className="text-xs text-gray-400 shrink-0">{a.date}</span>
+                  <span className="text-xs text-gray-400 shrink-0">{displayDate(a.date)}</span>
                 </div>
               ))}
             </section>

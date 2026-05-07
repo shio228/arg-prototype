@@ -154,5 +154,27 @@
     "hidden": true,
     "searchKeyword": "存在しない",
     "thumbnail": "/images/login.jpg"
+  },
+  {
+    "id": 16,
+    "title": "まだ記事はありません",
+    "date": "",
+    "status": "published",
+    "authorId": "a666",
+    "views": 0,
+    "recommended": false,
+    "hidden": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 17,
+    "title": "おめでとう",
+    "date": "",
+    "status": "draft",
+    "authorId": "a666",
+    "views": 0,
+    "recommended": false,
+    "hidden": true,
+    "thumbnail": ""
   }
 ]
