@@ -13,6 +13,7 @@ import Rules from "./pages/Rules";
 import ArticleSearch from "./pages/ArticleSearch";
 import Article from "./pages/article";
 import About from "./pages/About";
+import { use } from "react";
 
 
 function Router() {
@@ -38,14 +39,16 @@ function Router() {
 
 function ConditionalHeader() {
   const [isHome] = useRoute('/');
-  if (isHome) return null;
+  const [isNotFound] = useRoute('/404');
+  if (isHome || isNotFound) return null;
   return <Header />;
 }
 
 function ConditionalFooter() {
   const [isHome] = useRoute('/');
+  const [isNotFound] = useRoute('/404');
   const [isArticle] = useRoute('/article/:id');
-  if (isHome) return null;
+  if (isHome || isNotFound) return null;
   if (isArticle) return <ArticleFooter />;
   return <MainFooter />;
 }

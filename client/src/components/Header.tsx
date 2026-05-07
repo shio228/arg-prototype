@@ -102,14 +102,41 @@ function LoginDialog({ open, onClose, onLoginSuccess }: LoginDialogProps) {
   );
 }
 
-function RegisterDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
-  const [email, setEmail] = useState('');
+interface RegisterDialogProps {
+  open: boolean;
+  onClose: () => void;
+  onRegisterSuccess: (author: Author) => void;
+}
+
+function RegisterDialog({ open, onClose, onRegisterSuccess }: RegisterDialogProps) {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
+  const [passphrase, setPassphrase] = useState('');
+  const [error, setError] = useState('');
+  const [, setLocation] = useLocation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: 新規登録処理
+    setError('');
+
+    if (password !== confirm) {
+      setError('パスワードが一致しません。');
+      return;
+    }
+    if (passphrase !== 'aikotoba') {
+      setError('合言葉が正しくありません。');
+      return;
+    }
+
+    const author: Author = { id: 'a666', name: username };
+    onRegisterSuccess(author);
+    onClose();
+    setUsername('');
+    setPassword('');
+    setConfirm('');
+    setPassphrase('');
+    setLocation('/article/16');
   };
 
   return (
@@ -120,13 +147,13 @@ function RegisterDialog({ open, onClose }: { open: boolean; onClose: () => void 
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-2">
           <div className="space-y-1">
-            <Label htmlFor="reg-email">メールアドレス</Label>
+            <Label htmlFor="reg-username">ユーザー名</Label>
             <Input
-              id="reg-email"
-              type="email"
-              placeholder="example@mail.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              id="reg-username"
+              type="text"
+              placeholder="ユーザー名"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               required
             />
           </div>
@@ -142,7 +169,7 @@ function RegisterDialog({ open, onClose }: { open: boolean; onClose: () => void 
             />
           </div>
           <div className="space-y-1">
-            <Label htmlFor="reg-confirm">パスワード（確認）</Label>
+            <Label htmlFor="reg-confirm">パスワード（確認用）</Label>
             <Input
               id="reg-confirm"
               type="password"
@@ -152,6 +179,18 @@ function RegisterDialog({ open, onClose }: { open: boolean; onClose: () => void 
               required
             />
           </div>
+          <div className="space-y-1">
+            <Label htmlFor="reg-passphrase">合言葉</Label>
+            <Input
+              id="reg-passphrase"
+              type="text"
+              placeholder="合言葉"
+              value={passphrase}
+              onChange={(e) => setPassphrase(e.target.value)}
+              required
+            />
+          </div>
+          {error && <p className="text-sm text-red-500">{error}</p>}
           <Button type="submit" className="w-full border border-red-500 text-red-500 bg-white hover:bg-red-50">
             登録する
           </Button>
@@ -162,10 +201,16 @@ function RegisterDialog({ open, onClose }: { open: boolean; onClose: () => void 
 }
 
 const SESSION_KEY = 'loggedInAuthorId';
+const SESSION_NAME_KEY = 'loggedInAuthorName';
+const SESSION_DATE_KEY = 'registeredDate';
 
 async function restoreAuthor(): Promise<Author | null> {
   const savedId = sessionStorage.getItem(SESSION_KEY);
   if (!savedId) return null;
+  if (savedId === 'a666') {
+    const savedName = sessionStorage.getItem(SESSION_NAME_KEY);
+    return savedName ? { id: 'a666', name: savedName } : null;
+  }
   const res = await fetch('/data/authors.json');
   const authors: Author[] = await res.json();
   return authors.find((a) => a.id === savedId) ?? null;
@@ -188,8 +233,18 @@ export default function Header() {
     window.dispatchEvent(new Event('auth-changed'));
   };
 
+  const handleRegisterSuccess = (author: Author) => {
+    sessionStorage.setItem(SESSION_KEY, author.id);
+    sessionStorage.setItem(SESSION_NAME_KEY, author.name);
+    sessionStorage.setItem(SESSION_DATE_KEY, new Date().toISOString().split('T')[0]);
+    setLoggedInAuthor(author);
+    window.dispatchEvent(new Event('auth-changed'));
+  };
+
   const handleLogout = () => {
     sessionStorage.removeItem(SESSION_KEY);
+    sessionStorage.removeItem(SESSION_NAME_KEY);
+    sessionStorage.removeItem(SESSION_DATE_KEY);
     setLoggedInAuthor(null);
     window.dispatchEvent(new Event('auth-changed'));
   };
@@ -222,12 +277,14 @@ export default function Header() {
                 <PopoverContent className="w-48 p-3" align="end">
                   <p className="text-xs text-muted-foreground mb-1">ログインID</p>
                   <p className="text-sm font-medium mb-3">{loggedInAuthor.id}</p>
-                  <button
-                    onClick={handleLogout}
-                    className="w-full text-sm text-red-500 hover:text-red-600 border border-red-300 rounded px-3 py-1.5 hover:bg-red-50 transition-colors"
-                  >
-                    ログアウト
-                  </button>
+                  {loggedInAuthor.id !== 'a666' && (
+                    <button
+                      onClick={handleLogout}
+                      className="w-full text-sm text-red-500 hover:text-red-600 border border-red-300 rounded px-3 py-1.5 hover:bg-red-50 transition-colors"
+                    >
+                      ログアウト
+                    </button>
+                  )}
                 </PopoverContent>
               </Popover>
             </>
@@ -261,7 +318,7 @@ export default function Header() {
         onClose={() => setLoginOpen(false)}
         onLoginSuccess={handleLoginSuccess}
       />
-      <RegisterDialog open={registerOpen} onClose={() => setRegisterOpen(false)} />
+      <RegisterDialog open={registerOpen} onClose={() => setRegisterOpen(false)} onRegisterSuccess={handleRegisterSuccess} />
     </header>
   );
 }
