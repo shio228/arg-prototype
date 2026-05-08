@@ -2,6 +2,11 @@
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
 
+@font-face {
+  font-family: 'keifont';
+  src: url('/fonts/keifont.ttf') format('truetype');
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
