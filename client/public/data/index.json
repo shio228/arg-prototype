@@ -27,7 +27,7 @@
     "authorId": "a001",
     "views": 120,
     "recommended": true,
-    "thumbnail": "/images/mirror.jpg"
+    "thumbnail": "/images/hospital.png"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "authorId": "a002",
     "views": 10,
     "recommended": true,
-    "thumbnail": "/images/school.jpg"
+    "thumbnail": "/images/school.png"
   },
   {
     "id": 5,
@@ -59,7 +59,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "13番目の扉",
-    "thumbnail": "/images/door.jpg"
+    "thumbnail": "/images/door.png"
   },
   {
     "id": 7,
