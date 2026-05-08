@@ -252,7 +252,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-background border-b border-border">
       <div className="container flex h-16 items-center justify-between py-4">
-        <Link href="/articleSearch" className="flex items-center gap-2 font-bold text-xl hover:opacity-80 transition-opacity">
+        <Link href="/articleSearch" className="flex items-center gap-2 font-bold text-xl hover:opacity-80 transition-opacity" style={{ fontFamily: 'keifont, sans-serif' }}>
           <span>都市伝説愛好会</span>
         </Link>
 
