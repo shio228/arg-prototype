@@ -3,11 +3,23 @@ import { Button } from '@/components/ui/button';
 
 export default function Rules() {
   return (
-    <div className="min-h-screen flex flex-col" style={{ fontFamily: 'keifont, sans-serif' }}>
-      <main className="flex-1">
+    <div
+      className="min-h-screen flex flex-col relative overflow-hidden"
+      style={{
+        fontFamily: 'keifont, sans-serif',
+        background: 'radial-gradient(110% 80% at 50% 45%, oklch(0.18 0.01 60) 0%, oklch(0.10 0.01 60) 70%, oklch(0.04 0 0) 100%)',
+        '--foreground': 'oklch(0.94 0.02 80)',
+        '--muted-foreground': 'oklch(0.65 0.02 80)',
+        '--border': 'rgba(255,235,200,0.15)',
+        '--background': 'oklch(0.12 0.01 60)',
+      } as React.CSSProperties}
+    >
+      <div className="home-grain" style={{ zIndex: 0 }} />
+      <div className="home-vignette" style={{ zIndex: 1 }} />
+      <main className="flex-1 relative" style={{ zIndex: 2 }}>
         <article className="container max-w-2xl mx-auto py-16 px-4">
           <h1 className="text-4xl font-bold mb-8 text-foreground">管理人とのお約束</h1>
-          <p className='text-lg'>
+          <p className='text-lg text-foreground'>
             本サイトでは、都市伝説・未解決事象・怪異に関する記事を投稿いただくにあたり、以下の内容を遵守していただきます。
           </p>
           
@@ -33,14 +45,14 @@ export default function Rules() {
 
             <section>
               <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">3. コンテンツの取り扱い</h2>
-              <p className='text-lg'>
+              <p className='text-lg text-foreground'>
                 投稿された内容の著作権は投稿者に帰属しますが、本サイト上での掲載・編集・紹介の権利を運営者に許諾するものとします。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">4. アカウントについて</h2>
-              <p className='text-lg'>
+              <p className='text-lg text-foreground'>
                 不適切な投稿が確認された場合、投稿の削除やアカウントの停止を行うことがあります。
               </p>
             </section>
@@ -54,7 +66,7 @@ export default function Rules() {
             </section>
 
             <section>
-              <p className='text-lg'>
+              <p className='text-lg text-foreground'>
                 以上に同意の上、投稿を行ってください。
               </p>
             </section>
@@ -63,4 +75,5 @@ export default function Rules() {
       </main>
     </div>
   );
+
 }

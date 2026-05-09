@@ -250,9 +250,9 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background border-b border-border">
+    <header className="sticky top-0 z-50 w-full bg-neutral-950 border-b border-white/10">
       <div className="container flex h-16 items-center justify-between py-4">
-        <Link href="/articleSearch" className="flex items-center gap-2 font-bold text-xl hover:opacity-80 transition-opacity" style={{ fontFamily: 'keifont, sans-serif' }}>
+        <Link href="/articleSearch" className="flex items-center gap-2 font-bold text-xl hover:opacity-80 transition-opacity" style={{ fontFamily: 'keifont, sans-serif', color: 'oklch(0.94 0.02 80)' }}>
           <span>都市伝説愛好会</span>
         </Link>
 
@@ -260,7 +260,7 @@ export default function Header() {
           {loggedInAuthor ? (
             <>
               {/* 投稿ボタン（ハリボテ） */}
-              <div className="flex items-center bg-gray-100 p-1 rounded-full w-fit hover:opacity-80">
+              <div className="flex items-center bg-white/10 p-1 rounded-full w-fit hover:opacity-80">
                 <button className="px-6 py-2 rounded-full text-sm font-medium transition bg-red-500 text-white">
                   投稿
                 </button>
@@ -268,8 +268,8 @@ export default function Header() {
               {/* ユーザー名ボタン */}
               <Popover>
                 <PopoverTrigger asChild>
-                  <div className="flex items-center bg-gray-100 p-1 rounded-full w-fit hover:opacity-80 cursor-pointer">
-                    <button className="px-6 py-2 rounded-full text-sm font-medium transition border border-red-500 text-red-500 bg-white">
+                  <div className="flex items-center bg-white/10 p-1 rounded-full w-fit hover:opacity-80 cursor-pointer">
+                    <button className="px-6 py-2 rounded-full text-sm font-medium transition border border-red-400 text-red-400 bg-transparent">
                       {loggedInAuthor.name}
                     </button>
                   </div>
@@ -291,7 +291,7 @@ export default function Header() {
           ) : (
             <>
               {/* ログイン */}
-              <div className="flex items-center bg-gray-100 p-1 rounded-full w-fit hover:opacity-80">
+              <div className="flex items-center bg-white/10 p-1 rounded-full w-fit hover:opacity-80">
                 <button
                   onClick={() => setLoginOpen(true)}
                   className="px-6 py-2 rounded-full text-sm font-medium transition bg-red-500 text-white"
@@ -300,10 +300,10 @@ export default function Header() {
                 </button>
               </div>
               {/* 新規登録 */}
-              <div className="flex items-center bg-gray-100 p-1 rounded-full w-fit hover:opacity-80">
+              <div className="flex items-center bg-white/10 p-1 rounded-full w-fit hover:opacity-80">
                 <button
                   onClick={() => setRegisterOpen(true)}
-                  className="px-6 py-2 rounded-full text-sm font-medium transition border border-red-500 text-red-500 bg-white"
+                  className="px-6 py-2 rounded-full text-sm font-medium transition border border-red-400 text-red-400 bg-transparent"
                 >
                   新規登録
                 </button>

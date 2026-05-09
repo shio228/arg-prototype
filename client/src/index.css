@@ -253,23 +253,8 @@
 .home-entrance:hover { transform: translateY(-2px); }
 .home-entrance:active { transform: translateY(1px); }
 .home-ento-plaque {
-  position: relative; width: clamp(200px, 24vw, 320px); aspect-ratio: 1.9 / 1;
+  position: relative;
   display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(180deg, oklch(0.16 0.02 60) 0%, oklch(0.08 0.01 60) 100%);
-  border: 2px solid oklch(0.85 0.04 70);
-  box-shadow: 0 0 0 1px rgba(255,220,180,0.08) inset, 0 0 60px rgba(0,0,0,0.6);
-}
-.home-ento-plaque::before {
-  content: ""; position: absolute;
-  top: -14px; left: -22px; right: -22px; height: 16px;
-  background: oklch(0.85 0.04 70);
-  clip-path: polygon(0 100%, 6% 0, 94% 0, 100% 100%);
-}
-.home-ento-plaque::after {
-  content: ""; position: absolute;
-  bottom: -14px; left: -16px; right: -16px; height: 10px;
-  background: oklch(0.85 0.04 70);
-  clip-path: polygon(0 0, 100% 0, 96% 100%, 4% 100%);
 }
 .home-ento-kanji {
   font-family: "Yuji Syuku", "Shippori Mincho", serif; font-weight: 700;
@@ -311,7 +296,7 @@
   position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
   color: oklch(0.92 0.02 80); font-family: "Yuji Syuku", serif;
   font-size: clamp(32px, 5vw, 64px); letter-spacing: 0.4em;
-  writing-mode: vertical-rl; opacity: 0; transition: opacity .4s ease; text-align: center;
+  writing-mode: vertical-rl; white-space: nowrap; opacity: 0; transition: opacity .4s ease; text-align: center;
 }
 .home-glitch-text.on { opacity: 1; transition: opacity .8s ease .3s; }
 .home-glitch-sub {
