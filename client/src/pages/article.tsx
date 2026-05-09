@@ -82,7 +82,7 @@ export default function Article() {
           <h1 className="text-4xl font-bold text-muted-foreground">{article.title}</h1>
           <p className="text-sm text-muted-foreground">{displayDate(article.date)}</p>
 
-          <div className="mt-4 text-lg prose prose-neutral max-w-none text-muted-foreground">
+          <div className="mt-4 text-lg prose prose-invert max-w-none">
             <ReactMarkdown>{article.content}</ReactMarkdown>
           </div>
         </main>
