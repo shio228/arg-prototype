@@ -64,8 +64,19 @@ export default function ArticleSearch() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <main className="flex-1">
+    <div
+      className="min-h-screen flex flex-col relative overflow-hidden"
+      style={{
+        background: 'radial-gradient(110% 80% at 50% 45%, oklch(0.18 0.01 60) 0%, oklch(0.10 0.01 60) 70%, oklch(0.04 0 0) 100%)',
+        '--foreground': 'oklch(0.94 0.02 80)',
+        '--muted-foreground': 'oklch(0.65 0.02 80)',
+        '--border': 'rgba(255,235,200,0.15)',
+        '--background': 'oklch(0.12 0.01 60)',
+      } as React.CSSProperties}
+    >
+      <div className="home-grain" style={{ zIndex: 0 }} />
+      <div className="home-vignette" style={{ zIndex: 1 }} />
+      <main className="flex-1 relative" style={{ zIndex: 2 }}>
         <article className="container max-w-6xl mx-auto py-16 px-4">
           <div className="max-w-full mx-auto">
             <div className="max-w-sm mx-auto">
@@ -98,4 +109,5 @@ export default function ArticleSearch() {
       </main>
     </div>
   );
+
 }
