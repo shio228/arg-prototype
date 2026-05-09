@@ -30,7 +30,7 @@ export default function Home() {
     `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
 
   return (
-    <div className={`home-stage ${!transit ? 'home-flicker' : ''}`}>
+    <div className="home-stage">
       <div className="home-grain" />
       <div className="home-vignette" />
 
@@ -39,7 +39,7 @@ export default function Home() {
         <span className="tick tr" />
         <span className="tick bl" />
         <span className="tick br" />
-        <div className="c-tl">No. 0007 / 都市伝説愛好会</div>
+        <div className="c-tl">都市伝説愛好会</div>
         <div className="c-tr">私的閲覧専用 ・ Private Archive</div>
         <div className="c-bl">{stamp}</div>
         <div className="c-br">取扱注意 ・ Handle With Care</div>
@@ -50,7 +50,6 @@ export default function Home() {
 
       <div className="home-col">
         <div className="home-crest">
-          <div className="home-crest-no">CASE FILE — 0 0 0 7</div>
           <div className="home-crest-eye" />
           <div className="home-crest-rule" />
 
@@ -89,7 +88,7 @@ export default function Home() {
 
       <div className={`home-glitch-veil ${transit ? 'on' : ''}`}>
         <div className={`home-glitch-text ${revealed ? 'on' : ''}`}>
-          13番目の扉 は 開いた
+          13番目の扉<br />は開いた
         </div>
         <div className={`home-glitch-sub ${revealed ? 'on' : ''}`}>
           SIGNAL  LOST  —  ARCHIVE  RESPONDING …
