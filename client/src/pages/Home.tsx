@@ -89,7 +89,7 @@ export default function Home() {
 
       <div className={`home-glitch-veil ${transit ? 'on' : ''}`}>
         <div className={`home-glitch-text ${revealed ? 'on' : ''}`}>
-          扉 は 開 い た
+          13番目の扉 は 開いた
         </div>
         <div className={`home-glitch-sub ${revealed ? 'on' : ''}`}>
           SIGNAL  LOST  —  ARCHIVE  RESPONDING …

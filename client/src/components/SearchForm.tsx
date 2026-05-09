@@ -33,7 +33,7 @@ export default function SearchForm({ articles, onSearch }: SearchFormProps) {
             placeholder="記事を検索..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="pl-10 bg-background border-border"
+            className="pl-10 bg-background border-border text-foreground placeholder:text-muted-foreground"
           />
         </div>
         <Button type="submit" variant="default" className="px-6">

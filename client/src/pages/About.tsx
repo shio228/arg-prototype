@@ -24,7 +24,7 @@ export default function About() {
             <section>
               <h2 className="text-2xl font-bold mb-4 mt-8 text-foreground">■はじめまして！！！</h2>
               <p className='text-lg'>
-              「都市伝説同好会」管理人の『管理人』です！（気の利いた名前が思いつかなくてそのままです笑）
+              「都市伝説愛好会」管理人の『管理人』です！（気の利いた名前が思いつかなくてそのままです笑）
               </p>
 
             </section>
