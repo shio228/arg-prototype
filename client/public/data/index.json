@@ -28,7 +28,7 @@
     "authorId": "a001",
     "views": 120,
     "recommended": true,
-    "thumbnail": "/images/mirror.jpg"
+    "thumbnail": "/images/hospital.png"
   },
   {
     "id": 4,
@@ -38,7 +38,7 @@
     "authorId": "a002",
     "views": 10,
     "recommended": true,
-    "thumbnail": "/images/school.jpg"
+    "thumbnail": "/images/school.png"
   },
   {
     "id": 5,
@@ -48,7 +48,7 @@
     "authorId": "a003",
     "views": 11,
     "recommended": false,
-    "thumbnail": "/images/phone.jpg"
+    "thumbnail": "/images/phone.png"
   },
   {
     "id": 6,
@@ -60,7 +60,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "13番目の扉",
-    "thumbnail": "/images/door.jpg"
+    "thumbnail": "/images/door.png"
   },
   {
     "id": 7,
@@ -80,7 +80,7 @@
     "authorId": "a002",
     "views": 0,
     "recommended": false,
-    "thumbnail": "/images/train.jpg"
+    "thumbnail": "/images/train.png"
   },
   {
     "id": 9,
@@ -90,7 +90,7 @@
     "authorId": "a003",
     "views": 21,
     "recommended": false,
-    "thumbnail": "/images/camera.jpg"
+    "thumbnail": "/images/camera.png"
   },
   {
     "id": 10,
@@ -110,7 +110,7 @@
     "authorId": "a003",
     "views": 18,
     "recommended": false,
-    "thumbnail": "/images/crosswalk.jpg"
+    "thumbnail": "/images/crosswalk.png"
   },
   {
     "id": 12,

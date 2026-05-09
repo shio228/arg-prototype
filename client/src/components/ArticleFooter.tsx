@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-border bg-background py-8">
+    <footer className="w-full border-t border-border bg-neutral-950 py-8">
       <div className="container">
         <div className="flex justify-center gap-6 mb-6 text-sm">
         </div>

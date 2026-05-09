@@ -13,7 +13,6 @@ import Rules from "./pages/Rules";
 import ArticleSearch from "./pages/ArticleSearch";
 import Article from "./pages/article";
 import About from "./pages/About";
-import { use } from "react";
 
 
 function Router() {
@@ -38,17 +37,20 @@ function Router() {
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function ConditionalHeader() {
-  const [isHome] = useRoute('/');
-  const [isNotFound] = useRoute('/404');
-  if (isHome || isNotFound) return null;
+  const [isArticle] = useRoute('/article/:id');
+  const [isRules] = useRoute('/rules');
+  const [isAbout] = useRoute('/about');
+  const [isArticleSearch] = useRoute('/articleSearch');
+  if (!isArticle && !isRules && !isAbout && !isArticleSearch) return null;
   return <Header />;
 }
 
 function ConditionalFooter() {
-  const [isHome] = useRoute('/');
-  const [isNotFound] = useRoute('/404');
   const [isArticle] = useRoute('/article/:id');
-  if (isHome || isNotFound) return null;
+  const [isRules] = useRoute('/rules');
+  const [isAbout] = useRoute('/about');
+  const [isArticleSearch] = useRoute('/articleSearch');
+  if (!isArticle && !isRules && !isAbout && !isArticleSearch) return null;
   if (isArticle) return <ArticleFooter />;
   return <MainFooter />;
 }
