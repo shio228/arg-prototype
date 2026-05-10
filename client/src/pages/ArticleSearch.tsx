@@ -32,7 +32,7 @@ export default function ArticleSearch() {
   const sortedArticles = (tab: Tab) => {
     const list = [...baseArticles];
     if (tab === 'ranking') return list.sort((a, b) => (b.views ?? 0) - (a.views ?? 0));
-    if (tab === 'recommended') return list.filter((a) => a.recommended);
+    if (tab === 'recommended') return list.filter((a) => a.recommended).sort((a, b) => b.date.localeCompare(a.date));
     return list.sort((a, b) => b.date.localeCompare(a.date));
   };
 
