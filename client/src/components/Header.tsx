@@ -136,7 +136,7 @@ function RegisterDialog({ open, onClose, onRegisterSuccess }: RegisterDialogProp
     setPassword('');
     setConfirm('');
     setPassphrase('');
-    setLocation('/article/16');
+    setLocation('/article/25');
   };
 
   return (

@@ -2,8 +2,8 @@
   "id": 12,
   "title": "閉じないブラウザタブ",
   "date": "2026-04-23",
-  "status": "draft",
-  "authorId": "a003",
+  "status": "published",
+  "authorId": "a002",
   "thumbnail": "/images/browser.jpg",
   "content": "とあるサイトを開くと、タブが閉じられなくなる。\n\n強制終了しても、再起動すると必ず復元される。"
 }
