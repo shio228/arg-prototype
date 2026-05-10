@@ -2,7 +2,7 @@
   "id": 13,
   "title": "録音されない声",
   "date": "2026-04-22",
-  "status": "published",
+  "status": "draft",
   "authorId": "a002",
   "thumbnail": "/images/recorder.jpg",
   "content": "ある人物の声だけが録音に残らない。\n\n会話は成立しているのに、再生するとその部分だけ無音になる。"

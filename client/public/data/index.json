@@ -17,8 +17,7 @@
     "authorId": "a001",
     "views": 0,
     "recommended": false,
-    "hidden": true,
-    "searchKeyword": "（架空の固有名詞）トンネル"
+    "thumbnail": "/images/elevator.png"
   },
   {
     "id": 3,
@@ -35,7 +34,7 @@
     "title": "誰もいない放送室",
     "date": "2026-05-03",
     "status": "published",
-    "authorId": "a002",
+    "authorId": "a001",
     "views": 10,
     "recommended": true,
     "thumbnail": "/images/school.png"
@@ -45,9 +44,11 @@
     "title": "消えない通知",
     "date": "2026-04-30",
     "status": "published",
-    "authorId": "a003",
+    "authorId": "a001",
     "views": 11,
     "recommended": false,
+    "hidden": true,
+    "searchKeyword": "（架空の固有名詞）トンネル",
     "thumbnail": "/images/phone.png"
   },
   {
@@ -67,9 +68,11 @@
     "title": "逆再生の足音",
     "date": "2026-04-28",
     "status": "published",
-    "authorId": "a002",
+    "authorId": "a001",
     "views": 52,
-    "recommended": true,
+    "recommended": false,
+    "hidden": true,
+    "searchKeyword": "トンネル",
     "thumbnail": "/images/footsteps.jpg"
   },
   {
@@ -77,7 +80,7 @@
     "title": "存在しない最終電車",
     "date": "2026-04-27",
     "status": "draft",
-    "authorId": "a002",
+    "authorId": "a001",
     "views": 0,
     "recommended": false,
     "thumbnail": "/images/train.png"
@@ -87,7 +90,7 @@
     "title": "空白の監視カメラ",
     "date": "2026-04-26",
     "status": "published",
-    "authorId": "a003",
+    "authorId": "a002",
     "views": 21,
     "recommended": false,
     "thumbnail": "/images/camera.png"
@@ -97,7 +100,7 @@
     "title": "午前3時の着信",
     "date": "2026-04-25",
     "status": "published",
-    "authorId": "a003",
+    "authorId": "a002",
     "views": 65,
     "recommended": true,
     "thumbnail": "/images/phone2.jpg"
@@ -107,41 +110,43 @@
     "title": "消える横断歩道",
     "date": "2026-04-24",
     "status": "published",
-    "authorId": "a003",
+    "authorId": "a002",
     "views": 18,
     "recommended": false,
+    "hidden": true,
+    "searchKeyword": "トンネル",
     "thumbnail": "/images/crosswalk.png"
   },
   {
     "id": 12,
     "title": "閉じないブラウザタブ",
     "date": "2026-04-23",
-    "status": "draft",
-    "authorId": "a003",
+    "status": "published",
+    "authorId": "a002",
     "views": 0,
     "recommended": false,
+    "hidden": true,
+    "searchKeyword": "（架空の固有名詞）トンネル",
     "thumbnail": "/images/browser.jpg"
   },
   {
     "id": 13,
     "title": "録音されない声",
     "date": "2026-04-22",
-    "status": "published",
+    "status": "draft",
     "authorId": "a002",
-    "views": 43,
-    "recommended": true,
+    "views": 0,
+    "recommended": false,
     "thumbnail": "/images/recorder.jpg"
   },
   {
     "id": 14,
     "title": "書き換えられる日記",
     "date": "2026-04-21",
-    "status": "published",
-    "authorId": "a001",
-    "views": 27,
+    "status": "draft",
+    "authorId": "a002",
+    "views": 0,
     "recommended": false,
-    "hidden": true,
-    "searchKeyword": "書き換えられる日記",
     "thumbnail": "/images/diary.jpg"
   },
   {
@@ -152,12 +157,116 @@
     "authorId": "a003",
     "views": 39,
     "recommended": true,
-    "hidden": true,
-    "searchKeyword": "存在しない",
     "thumbnail": "/images/login.jpg"
   },
   {
     "id": 16,
+    "title": "増殖するタブ",
+    "date": "2026-04-10",
+    "status": "published",
+    "authorId": "a003",
+    "views": 0,
+    "recommended": false,
+    "hidden": true,
+    "searchKeyword": "存在しない",
+    "thumbnail": "/images/tabs.jpg"
+  },
+  {
+    "id": 17,
+    "title": "繰り返される午前0時",
+    "date": "2026-04-18",
+    "status": "published",
+    "authorId": "a003",
+    "views": 0,
+    "recommended": false,
+    "hidden": true,
+    "searchKeyword": "存在しない",
+    "thumbnail": "/images/clock.jpg"
+  },
+  {
+    "id": 18,
+    "title": "開かないファイル",
+    "date": "2026-04-17",
+    "status": "published",
+    "authorId": "a003",
+    "views": 21,
+    "recommended": false,
+    "hidden": true,
+    "searchKeyword": "存在しない",
+    "thumbnail": "/images/file.jpg"
+  },
+  {
+    "id": 19,
+    "title": "増え続ける影",
+    "date": "2026-04-16",
+    "status": "published",
+    "authorId": "a003",
+    "views": 65,
+    "recommended": false,
+    "hidden": true,
+    "searchKeyword": "存在しない",
+    "thumbnail": "/images/shadow.jpg"
+  },
+  {
+    "id": 20,
+    "title": "存在しない交差点",
+    "date": "2026-04-15",
+    "status": "draft",
+    "authorId": "a003",
+    "views": 0,
+    "recommended": false,
+    "thumbnail": "/images/intersection.jpg"
+  },
+  {
+    "id": 21,
+    "title": "鳴り止まないアラーム",
+    "date": "2026-04-14",
+    "status": "published",
+    "authorId": "a004",
+    "views": 0,
+    "recommended": false,
+    "hidden": true,
+    "searchKeyword": "存在しない",
+    "thumbnail": "/images/alarm.jpg"
+  },
+  {
+    "id": 22,
+    "title": "戻らないエンターキー",
+    "date": "2026-04-13",
+    "status": "published",
+    "authorId": "a005",
+    "views": 43,
+    "recommended": false,
+    "hidden": true,
+    "searchKeyword": "存在しない",
+    "thumbnail": "/images/keyboard.jpg"
+  },
+  {
+    "id": 23,
+    "title": "消える階段",
+    "date": "2026-04-12",
+    "status": "published",
+    "authorId": "a006",
+    "views": 27,
+    "recommended": false,
+    "hidden": true,
+    "searchKeyword": "書き換えられる日記",
+    "thumbnail": "/images/stairs.jpg"
+  },
+  {
+    "id": 24,
+    "title": "録画されない映像",
+    "date": "2026-04-11",
+    "status": "published",
+    "authorId": "a007",
+    "views": 39,
+    "recommended": false,
+    "hidden": true,
+    "searchKeyword": "存在しない",
+    "thumbnail": "/images/video.jpg"
+  },
+  {
+    "id": 25,
     "title": "まだ記事はありません",
     "date": "",
     "status": "published",
@@ -168,7 +277,7 @@
     "thumbnail": ""
   },
   {
-    "id": 17,
+    "id": 26,
     "title": "おめでとう",
     "date": "",
     "status": "draft",

@@ -1,9 +1,9 @@
 {
   "id": 16,
-  "title": "まだ記事はありません",
-  "date": "YYYY-MM-DD",
+  "title": "増殖するタブ",
+  "date": "2026-04-10",
   "status": "published",
-  "authorId": "a666",
-  "thumbnail": "",
-  "content": "本文なし"
+  "authorId": "a003",
+  "thumbnail": "/images/tabs.jpg",
+  "content": "ブラウザのタブが勝手に増えていく。\n\n閉じても閉じても、同じページが開かれる。"
 }
