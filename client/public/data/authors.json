@@ -1,6 +1,6 @@
 [
   {
-    "id": "ULS001",
+    "id": "a001",
     "name": "天使ちゃん愛好家",
     "icon": "/images/authors/a001.png",
     "bio": "！",
@@ -14,7 +14,7 @@
     "passwordHash": "1a78f0d147be2a5f1fd3418473cd9b3c110d0ecc6bb91dd93e422816795e7aa9"
   },
   {
-    "id": "ULS666",
+    "id": "a003",
     "name": "匿名投稿者",
     "icon": "/images/authors/unknown.png",
     "bio": "詳細不明。投稿履歴に一貫性がない。",
