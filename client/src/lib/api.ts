@@ -5,7 +5,12 @@ export async function getArticles() {
 
 export async function getArticle(id: string) {
   const res = await fetch(`/data/articles/${id}.json`);
-  return res.json();
+  const article = await res.json();
+  if (article.contentFile) {
+    const mdRes = await fetch(article.contentFile);
+    article.content = await mdRes.text();
+  }
+  return article;
 }
 
 export async function getRecentArticles(authorId: string) {

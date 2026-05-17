@@ -5,5 +5,5 @@
   "status": "draft",
   "authorId": "a001",
   "thumbnail": "/images/train.png",
-  "content": "終電後にだけ現れる電車がある。\n\n行き先表示は常に空白。\n\n乗った者の記録は残らない。"
+  "contentFile": "/data/content/8.md"
 }

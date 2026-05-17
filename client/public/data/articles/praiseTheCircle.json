@@ -5,5 +5,5 @@
   "status": "published",
   "authorId": "a003",
   "thumbnail": "/images/clock.jpg",
-  "content": "気がつくと時計は午前0時を指している。\n\n時間が進んでいるはずなのに、何度確認しても同じ時刻のままだ。\n\n外の景色も変わらない。"
+  "contentFile": "/data/content/praiseTheCircle.md"
 }

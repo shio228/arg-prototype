@@ -5,5 +5,5 @@
   "status": "draft",
   "authorId": "a003",
   "thumbnail": "/images/intersection.jpg",
-  "content": "地図に載っていない交差点がある。\n\n一度迷い込むと、同じ場所を何度も通ることになる。"
+  "contentFile": "/data/content/20.md"
 }

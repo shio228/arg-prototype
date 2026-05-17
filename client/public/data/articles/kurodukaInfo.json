@@ -5,5 +5,5 @@
   "status": "published",
   "authorId": "a001",
   "thumbnail": "/images/door.png",
-  "content": "古いアパートには存在しないはずの13番目の扉があるという。\n\nその扉は深夜にだけ現れる。\n\n開けた者は、二度と戻ってこない。"
+  "contentFile": "/data/content/kurodukaInfo.md"
 }

@@ -5,5 +5,5 @@
   "status": "draft",
   "authorId": "a002",
   "thumbnail": "/images/recorder.jpg",
-  "content": "ある人物の声だけが録音に残らない。\n\n会話は成立しているのに、再生するとその部分だけ無音になる。"
+  "contentFile": "/data/content/13.md"
 }
