@@ -30,7 +30,7 @@
     "thumbnail": "/images/hospital.png"
   },
   {
-    "id": 4,
+    "id": "harumyangel",
     "title": "天使と一緒に心霊スポットに行ったときの話！",
     "date": "2026-05-03",
     "status": "published",
@@ -40,7 +40,7 @@
     "thumbnail": "/images/school.png"
   },
   {
-    "id": "mutsukage_info",
+    "id": "mutsukageInfo",
     "title": "六ツ影トンネル情報交流所！",
     "date": "2026-04-30",
     "status": "published",
@@ -52,7 +52,7 @@
     "thumbnail": "/images/phone.png"
   },
   {
-    "id": 6,
+    "id": "kurodukaInfo",
     "title": "黒塚療養所",
     "date": "2026-04-29",
     "status": "published",
@@ -64,7 +64,7 @@
     "thumbnail": "/images/door.png"
   },
   {
-    "id": 7,
+    "id": "13thorgan",
     "title": "世界の腑",
     "date": "2026-04-28",
     "status": "published",
@@ -86,7 +86,7 @@
     "thumbnail": "/images/train.png"
   },
   {
-    "id": 9,
+    "id": "idAdvice",
     "title": "人怖ネタ。特定について",
     "date": "2026-04-26",
     "status": "published",
@@ -96,7 +96,7 @@
     "thumbnail": "/images/camera.png"
   },
   {
-    "id": 10,
+    "id": "selfIntroduction",
     "title": "自己紹介",
     "date": "2026-04-25",
     "status": "published",
@@ -106,7 +106,7 @@
     "thumbnail": "/images/phone2.jpg"
   },
   {
-    "id": 11,
+    "id": "mutsukageInfoExchange",
     "title": "六ツ影トンネル情報交換",
     "date": "2026-04-24",
     "status": "published",
@@ -118,7 +118,7 @@
     "thumbnail": "/images/crosswalk.png"
   },
   {
-    "id": 12,
+    "id": "kurodukaReport",
     "title": "黒塚療養所レポート",
     "date": "2026-04-23",
     "status": "published",
@@ -160,7 +160,7 @@
     "thumbnail": "/images/login.jpg"
   },
   {
-    "id": 16,
+    "id": "oldViscera",
     "title": "増殖するタブ",
     "date": "2026-04-10",
     "status": "published",
@@ -172,7 +172,7 @@
     "thumbnail": "/images/tabs.jpg"
   },
   {
-    "id": 17,
+    "id": "praiseTheCircle",
     "title": "繰り返される午前0時",
     "date": "2026-04-18",
     "status": "published",
@@ -184,7 +184,7 @@
     "thumbnail": "/images/clock.jpg"
   },
   {
-    "id": 18,
+    "id": "6ShadowTruth",
     "title": "開かないファイル",
     "date": "2026-04-17",
     "status": "published",
@@ -196,7 +196,7 @@
     "thumbnail": "/images/file.jpg"
   },
   {
-    "id": 19,
+    "id": "residentsCharts",
     "title": "増え続ける影",
     "date": "2026-04-16",
     "status": "published",
@@ -230,7 +230,7 @@
     "thumbnail": "/images/alarm.jpg"
   },
   {
-    "id": 22,
+    "id": "immortals",
     "title": "戻らないエンターキー",
     "date": "2026-04-13",
     "status": "published",
@@ -242,7 +242,7 @@
     "thumbnail": "/images/keyboard.jpg"
   },
   {
-    "id": 23,
+    "id": "swallowRecord",
     "title": "消える階段",
     "date": "2026-04-12",
     "status": "published",
@@ -254,7 +254,7 @@
     "thumbnail": "/images/stairs.jpg"
   },
   {
-    "id": 24,
+    "id": "thresholdConduit",
     "title": "録画されない映像",
     "date": "2026-04-11",
     "status": "published",
