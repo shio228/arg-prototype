@@ -4,8 +4,13 @@ export async function getArticles() {
 }
 
 export async function getArticle(id: string) {
-  const res = await fetch(`/data/articles/${id}.json`);
+  const [res, index] = await Promise.all([
+    fetch(`/data/articles/${id}.json`),
+    getArticles(),
+  ]);
   const article = await res.json();
+  const meta = index.find((a: any) => String(a.id) === String(id));
+  if (meta) Object.assign(article, meta);
   if (article.contentFile) {
     const mdRes = await fetch(article.contentFile);
     article.content = await mdRes.text();

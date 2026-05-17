@@ -17,6 +17,7 @@ export default function Article() {
   const [recentArticles, setRecentArticles] = useState<any[]>([]);
   const [draftArticles, setDraftArticles] = useState<any[]>([]);
   const [loggedInAuthorId, setLoggedInAuthorId] = useState<string | null>(sessionStorage.getItem(SESSION_KEY));
+  const [prevHidden, setPrevHidden] = useState(() => sessionStorage.getItem('lastArticleHidden') === 'true');
 
   useEffect(() => {
     const handler = () => setLoggedInAuthorId(sessionStorage.getItem(SESSION_KEY));
@@ -26,6 +27,8 @@ export default function Article() {
 
   useEffect(() => {
     getArticle(id).then((articleData) => {
+      setPrevHidden(!!articleData.hidden);
+      sessionStorage.setItem('lastArticleHidden', String(!!articleData.hidden));
       setArticle(articleData);
       getRecentArticles(articleData.authorId).then(setRecentArticles);
       const loggedIn = sessionStorage.getItem(SESSION_KEY);
@@ -39,18 +42,38 @@ export default function Article() {
 
   const [imageOpen, setImageOpen] = useState(false);
 
-  if (!article) return <div>Loading...</div>;
+  useEffect(() => {
+    if (!article) return;
+    if (article.hidden) document.body.classList.add('hidden-article');
+    return () => document.body.classList.remove('hidden-article');
+  }, [article]);
+
+  if (!article) return (
+    <div className="min-h-screen" style={{ background: prevHidden
+      ? 'radial-gradient(110% 80% at 50% 45%, oklch(0.88 0.01 60) 0%, oklch(0.94 0.01 60) 70%, oklch(0.98 0 0) 100%)'
+      : 'radial-gradient(110% 80% at 50% 45%, oklch(0.18 0.01 60) 0%, oklch(0.10 0.01 60) 70%, oklch(0.04 0 0) 100%)'
+    }} />
+  );
+
+  const isHidden = !!article.hidden;
+  const pageStyle = (isHidden ? {
+    background: 'radial-gradient(110% 80% at 50% 45%, oklch(0.88 0.01 60) 0%, oklch(0.94 0.01 60) 70%, oklch(0.98 0 0) 100%)',
+    '--foreground': 'oklch(0.12 0.02 80)',
+    '--muted-foreground': 'oklch(0.38 0.02 80)',
+    '--border': 'rgba(55,35,0,0.2)',
+    '--background': 'oklch(0.92 0.01 60)',
+  } : {
+    background: 'radial-gradient(110% 80% at 50% 45%, oklch(0.18 0.01 60) 0%, oklch(0.10 0.01 60) 70%, oklch(0.04 0 0) 100%)',
+    '--foreground': 'oklch(0.94 0.02 80)',
+    '--muted-foreground': 'oklch(0.65 0.02 80)',
+    '--border': 'rgba(255,235,200,0.15)',
+    '--background': 'oklch(0.12 0.01 60)',
+  }) as React.CSSProperties;
 
   return (
     <div
       className="min-h-screen relative overflow-hidden"
-      style={{
-        background: 'radial-gradient(110% 80% at 50% 45%, oklch(0.18 0.01 60) 0%, oklch(0.10 0.01 60) 70%, oklch(0.04 0 0) 100%)',
-        '--foreground': 'oklch(0.94 0.02 80)',
-        '--muted-foreground': 'oklch(0.65 0.02 80)',
-        '--border': 'rgba(255,235,200,0.15)',
-        '--background': 'oklch(0.12 0.01 60)',
-      } as React.CSSProperties}
+      style={pageStyle}
     >
       <div className="home-grain" style={{ zIndex: 0 }} />
       <div className="home-vignette" style={{ zIndex: 1 }} />
@@ -82,7 +105,7 @@ export default function Article() {
           <h1 className="text-4xl font-bold text-muted-foreground">{article.title}</h1>
           <p className="text-sm text-muted-foreground">{displayDate(article.date)}</p>
 
-          <div className="mt-4 text-lg prose prose-invert max-w-none">
+          <div className={`mt-4 text-lg prose max-w-none ${isHidden ? '' : 'prose-invert'}`}>
             <ReactMarkdown>{article.content}</ReactMarkdown>
           </div>
         </main>

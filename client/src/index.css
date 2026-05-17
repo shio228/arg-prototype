@@ -311,6 +311,21 @@
   color: var(--ink-soft); opacity: 0.45; z-index: 4; white-space: nowrap;
 }
 
+/* 隠し記事ページのヘッダー・フッター反転 */
+body.hidden-article header {
+  background-color: oklch(0.78 0.01 60) !important;
+  border-bottom-color: rgba(55,35,0,0.25) !important;
+}
+body.hidden-article header a,
+body.hidden-article header span {
+  color: oklch(0.12 0.02 80) !important;
+}
+body.hidden-article footer {
+  background-color: oklch(0.78 0.01 60) !important;
+  border-top-color: rgba(55,35,0,0.25) !important;
+  color: oklch(0.15 0.02 80) !important;
+}
+
 @layer components {
   /**
    * Custom container utility that centers content and adds responsive padding.
