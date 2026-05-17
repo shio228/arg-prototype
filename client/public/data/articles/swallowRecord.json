@@ -5,5 +5,5 @@
   "status": "published",
   "authorId": "a006",
   "thumbnail": "/images/stairs.jpg",
-  "content": "上るたびに段数が減っていく階段がある。\n\n振り返ると、もう戻ることはできない。"
+  "contentFile": "/data/content/swallowRecord.md"
 }

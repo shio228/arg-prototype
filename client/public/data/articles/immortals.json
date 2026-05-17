@@ -5,5 +5,5 @@
   "status": "published",
   "authorId": "a005",
   "thumbnail": "/images/keyboard.jpg",
-  "content": "一度押すと戻らないエンターキーがある。\n\nその後、入力した内容はすべてどこかへ送信されている。"
+  "contentFile": "/data/content/immortals.md"
 }

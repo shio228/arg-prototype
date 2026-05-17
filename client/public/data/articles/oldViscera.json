@@ -5,5 +5,5 @@
   "status": "published",
   "authorId": "a003",
   "thumbnail": "/images/tabs.jpg",
-  "content": "ブラウザのタブが勝手に増えていく。\n\n閉じても閉じても、同じページが開かれる。"
+  "contentFile": "/data/content/oldViscera.md"
 }

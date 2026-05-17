@@ -5,5 +5,5 @@
   "status": "published",
   "authorId": "a002",
   "thumbnail": "/images/crosswalk.png",
-  "content": "ある交差点の横断歩道は、夜になると消える。\n\n渡ろうとすると、どこにも道が存在しない。"
+  "contentFile": "/data/content/mutsukageInfoExchange.md"
 }

@@ -5,5 +5,5 @@
   "status": "published",
   "authorId": "a002",
   "thumbnail": "/images/browser.jpg",
-  "content": "とあるサイトを開くと、タブが閉じられなくなる。\n\n強制終了しても、再起動すると必ず復元される。"
+  "contentFile": "/data/content/kurodukaReport.md"
 }

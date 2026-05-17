@@ -5,5 +5,5 @@
   "status": "published",
   "authorId": "a001",
   "thumbnail": "/images/school.png",
-  "content": "見てくれてありがとう！〇〇です！！\n今日の記事は、私の天使、ハルちゃんと一緒に散歩してきた心霊スポットのレポート！"
+  "contentFile": "/data/content/harumyangel.md"
 }
