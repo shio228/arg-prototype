@@ -220,6 +220,7 @@ export default function Header() {
   const [loginOpen, setLoginOpen] = useState(false);
   const [registerOpen, setRegisterOpen] = useState(false);
   const [loggedInAuthor, setLoggedInAuthor] = useState<Author | null>(null);
+  const [, setLocation] = useLocation();
 
   useEffect(() => {
     restoreAuthor().then((author) => {
@@ -247,6 +248,7 @@ export default function Header() {
     sessionStorage.removeItem(SESSION_DATE_KEY);
     setLoggedInAuthor(null);
     window.dispatchEvent(new Event('auth-changed'));
+    setLocation('/articleSearch');
   };
 
   return (
