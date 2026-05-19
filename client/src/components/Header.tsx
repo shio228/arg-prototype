@@ -124,12 +124,12 @@ function RegisterDialog({ open, onClose, onRegisterSuccess }: RegisterDialogProp
       setError('パスワードが一致しません。');
       return;
     }
-    if (passphrase !== 'aikotoba') {
+    if (passphrase !== 'OUROBOROS') {
       setError('合言葉が正しくありません。');
       return;
     }
 
-    const author: Author = { id: 'a666', name: username };
+    const author: Author = { id: 'OUROBOROS0000', name: username };
     onRegisterSuccess(author);
     onClose();
     setUsername('');
