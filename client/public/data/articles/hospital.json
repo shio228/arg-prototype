@@ -1,9 +1,9 @@
 {
   "id": "hospital",
   "title": "バンバン投稿！病院の怪談",
-  "date": "2026-05-03",
+  "date": "2016-05-10",
   "status": "published",
-  "authorId": "a001",
+  "authorId": "ULS001",
   "thumbnail": "/images/hospital.png",
   "contentFile": "/data/content/hospital.md"
 }

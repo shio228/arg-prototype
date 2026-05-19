@@ -124,12 +124,12 @@ function RegisterDialog({ open, onClose, onRegisterSuccess }: RegisterDialogProp
       setError('パスワードが一致しません。');
       return;
     }
-    if (passphrase !== 'aikotoba') {
+    if (passphrase !== 'OUROBOROS') {
       setError('合言葉が正しくありません。');
       return;
     }
 
-    const author: Author = { id: 'a666', name: username };
+    const author: Author = { id: 'OUROBOROS0000', name: username };
     onRegisterSuccess(author);
     onClose();
     setUsername('');
@@ -207,9 +207,9 @@ const SESSION_DATE_KEY = 'registeredDate';
 async function restoreAuthor(): Promise<Author | null> {
   const savedId = sessionStorage.getItem(SESSION_KEY);
   if (!savedId) return null;
-  if (savedId === 'a666') {
+  if (savedId === 'OUROBOROS0000') {
     const savedName = sessionStorage.getItem(SESSION_NAME_KEY);
-    return savedName ? { id: 'a666', name: savedName } : null;
+    return savedName ? { id: 'OUROBOROS0000', name: savedName } : null;
   }
   const res = await fetch('/data/authors.json');
   const authors: Author[] = await res.json();
@@ -279,7 +279,7 @@ export default function Header() {
                 <PopoverContent className="w-48 p-3" align="end">
                   <p className="text-xs text-muted-foreground mb-1">ログインID</p>
                   <p className="text-sm font-medium mb-3">{loggedInAuthor.id}</p>
-                  {loggedInAuthor.id !== 'a666' && (
+                  {loggedInAuthor.id !== 'OUROBOROS0000' && (
                     <button
                       onClick={handleLogout}
                       className="w-full text-sm text-red-500 hover:text-red-600 border border-red-300 rounded px-3 py-1.5 hover:bg-red-50 transition-colors"
