@@ -71,7 +71,7 @@ function LoginDialog({ open, onClose, onLoginSuccess }: LoginDialogProps) {
             <Input
               id="login-id"
               type="text"
-              placeholder="例：a001"
+              placeholder="例：ULS888"
               value={id}
               onChange={(e) => setId(e.target.value)}
               required
@@ -279,10 +279,13 @@ export default function Header() {
                 <PopoverContent className="w-48 p-3" align="end">
                   <p className="text-xs text-muted-foreground mb-1">ログインID</p>
                   <p className="text-sm font-medium mb-3">{loggedInAuthor.id}</p>
+                  <button className='w-full text-left text-sm text-red-500 hover:text-red-600 rounded px-3 py-1.5 hover:bg-red-50 transition-colors'>
+                    プロフ編集
+                  </button>
                   {loggedInAuthor.id !== 'OUROBOROS0000' && (
                     <button
                       onClick={handleLogout}
-                      className="w-full text-sm text-red-500 hover:text-red-600 border border-red-300 rounded px-3 py-1.5 hover:bg-red-50 transition-colors"
+                      className="w-full text-left text-sm text-red-500 hover:text-red-600 rounded px-3 py-1.5 hover:bg-red-50 transition-colors"
                     >
                       ログアウト
                     </button>
