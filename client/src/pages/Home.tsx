@@ -34,17 +34,6 @@ export default function Home() {
       <div className="home-grain" />
       <div className="home-vignette" />
 
-      <div className="home-corners">
-        <span className="tick tl" />
-        <span className="tick tr" />
-        <span className="tick bl" />
-        <span className="tick br" />
-        <div className="c-tl">都市伝説愛好会</div>
-        <div className="c-tr">私的閲覧専用 ・ Private Archive</div>
-        <div className="c-bl">{stamp}</div>
-        <div className="c-br">取扱注意 ・ Handle With Care</div>
-      </div>
-
       <div className="home-guide-v left" />
       <div className="home-guide-v right" />
 
@@ -70,13 +59,11 @@ export default function Home() {
             onClick={() => !transit && setTransit(true)}
             aria-label="入り口へ進む"
           >
-            <div className="home-ento-plaque">
-              <div className="home-ento-glow" />
-              <div className="home-ento-kanji">入口</div>
-              <div className="home-ento-seal">封</div>
-            </div>
+
+            <div className="home-ento-kanji">入口</div>
+            <div className="home-ento-seal">封</div>
             <div className="home-ento-caption">
-              ENTER  THE  ARCHIVE <span className="home-arrow">›››</span>
+              ENTER  THE  ARCHIVE
             </div>
           </button>
         </div>
