@@ -58,4 +58,4 @@
 
 ---
 
-O __ O _ O _ O _
+![Book](../images/theBook.png)
