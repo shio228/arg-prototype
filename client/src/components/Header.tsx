@@ -34,7 +34,7 @@ function LoginDialog({ open, onClose, onLoginSuccess }: LoginDialogProps) {
     setLoading(false);
 
     if (!ok) {
-      setError('IDまたはパスワードが正しくありません。');
+      setError('IDまたはパスワードが正しくありません。パスワードは英数小文字、8文字以上で入力してください');
       return;
     }
 
@@ -254,7 +254,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-neutral-950 border-b border-white/10">
       <div className="container flex h-16 items-center justify-between py-4">
-        <Link href="/articleSearch" className="flex items-center gap-2 font-bold text-xl hover:opacity-80 transition-opacity" style={{ fontFamily: 'keifont, sans-serif', color: 'oklch(0.94 0.02 80)' }}>
+        <Link href="/articleSearch" className="flex items-center gap-2 font-bold text-xl hover:opacity-80 transition-opacity" style={{ fontFamily: 'Shippori Mincho, Yuji Syuku', color: 'oklch(0.94 0.02 80)' }}>
           <span>都市伝説愛好会</span>
         </Link>
 
