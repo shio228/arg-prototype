@@ -19,5 +19,5 @@
 
 【巡礼者リスト】
 ---
-![pilgrims](../images/pilgrims.png)
+![pilgrims](../images/pilgrims.jpg)
 

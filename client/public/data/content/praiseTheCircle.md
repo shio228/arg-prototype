@@ -58,4 +58,4 @@
 
 ---
 
-![Book](../images/theBook.png)
+![Book](../images/theBook.jpg)

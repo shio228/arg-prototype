@@ -7,7 +7,7 @@
     "authorId": "ULS001",
     "views": 100,
     "recommended": true,
-    "thumbnail": "/images/tunnel.png"
+    "thumbnail": "/images/tunnel.jpg"
   },
   {
     "id": "occult2",
@@ -17,7 +17,7 @@
     "authorId": "ULS001",
     "views": 10,
     "recommended": false,
-    "thumbnail": "/images/elevator.png"
+    "thumbnail": "/images/karaoke.jpg"
   },
   {
     "id": "hospital",
@@ -27,7 +27,7 @@
     "authorId": "ULS001",
     "views": 120,
     "recommended": false,
-    "thumbnail": "/images/hospital.png"
+    "thumbnail": "/images/hospital.jpg"
   },
   {
     "id": "harumyangel",
@@ -37,7 +37,7 @@
     "authorId": "ULS001",
     "views": 10,
     "recommended": false,
-    "thumbnail": "/images/school.png"
+    "thumbnail": "/images/haru.jpg"
   },
   {
     "id": "mutsukageInfo",
@@ -49,7 +49,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "六ツ影トンネル",
-    "thumbnail": "/images/phone.png"
+    "thumbnail": "/images/phone.jpg"
   },
   {
     "id": "kurodukaInfo",
@@ -61,7 +61,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "黒塚療養所",
-    "thumbnail": "/images/door.png"
+    "thumbnail": "/images/door.jpg"
   },
   {
     "id": "13thorgan",
@@ -83,7 +83,7 @@
     "authorId": "ULS001",
     "views": 0,
     "recommended": false,
-    "thumbnail": "/images/train.png"
+    "thumbnail": "/images/tasukete.jpg"
   },
   {
     "id": "surveyList",
@@ -93,7 +93,7 @@
     "authorId": "ruinToMeguru",
     "views": 21,
     "recommended": false,
-    "thumbnail": "/images/camera.png"
+    "thumbnail": "/images/haikyo.jpg"
   },
   {
     "id": "selfIntroduction",
@@ -103,7 +103,7 @@
     "authorId": "ruinToMeguru",
     "views": 65,
     "recommended": true,
-    "thumbnail": "/images/phone2.jpg"
+    "thumbnail": "/images/myCamera.jpg"
   },
   {
     "id": "mutsukageInfoExchange",
@@ -115,7 +115,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "六ツ影トンネル",
-    "thumbnail": "/images/crosswalk.png"
+    "thumbnail": "/images/crosswalk.jpg"
   },
   {
     "id": "kurodukaReport",
@@ -127,7 +127,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "黒塚療養所",
-    "thumbnail": "/images/browser.jpg"
+    "thumbnail": "/images/kurodukaEntrance.jpg"
   },
   {
     "id": 13,
@@ -147,7 +147,7 @@
     "authorId": "ruinToMeguru",
     "views": 0,
     "recommended": false,
-    "thumbnail": "/images/diary.jpg"
+    "thumbnail": "/images/kurodukaEntrance.jpg"
   },
   {
     "id": "GATE",

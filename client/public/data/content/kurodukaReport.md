@@ -2,7 +2,7 @@
 
 本記事では、その内部構造の分析と、現地で確認したいくつかの不可解な事象について報告する。
 
-![kurodukaHospital](../images/kurodukaHospital.png)
+![kurodukaHospital](../images/kurodukaHospital.jpg)
 
 添付した写真は、黒塚療養所旧結核病棟の2階廊下である。
 
@@ -16,7 +16,7 @@
 
 直ちに録画機材を回して該当の病室と思われる場所を確認してみたが、車椅子は置かれていなかった。
 
-![kurodukaHospitalRoom](../images/kurodukaHospitalRoom.png)
+![kurodukaHospitalRoom](../images/kurodukaHospitalRoom.jpg)
 
 しかし、収録した映像を再生してみると軋み音は一切記録されておらず、代わりに低い耳鳴りのようなノイズだけが残っていた。
 

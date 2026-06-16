@@ -2,21 +2,21 @@
   {
     "id": "ULS001",
     "name": "ハル",
-    "icon": "/images/authors/a001.png",
+    "icon": "/images/authors/a001.jpg",
     "bio": "家族と天使ちゃんが大好き！",
     "passwordHash": "9555df02e2dd52265fc3b03a8add4580df84a5e144e15c8842f87ba5ecdbb237"
   },
   {
     "id": "ruinToMeguru",
     "name": "廃墟巡",
-    "icon": "/images/authors/ruinToMeguru.png",
+    "icon": "/images/authors/ruinToMeguru.jpg",
     "bio": "カメラマニア。廃墟写真収集家",
     "passwordHash": "b72e9ab8493a1b71d5a7664f3ffc47c6f483c04212a9a4494a3498bcb37ca004"
   },
   {
     "id": "ULS000",
     "name": "名無しの同好会メンバー",
-    "icon": "/images/authors/unknown.png",
+    "icon": "/images/authors/unknown.jpg",
     "bio": "見つけて",
     "passwordHash": "1f33ff05f84bdb5c7cd188b5795b497b1be1e0407dc44157b1e9dfdd3a8e20a6"
   }
