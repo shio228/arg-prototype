@@ -73,7 +73,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "世界の腑",
-    "thumbnail": "/images/footsteps.jpg"
+    "thumbnail": "/images/sekai.jpg"
   },
   {
     "id": 8,
@@ -115,7 +115,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "六ツ影トンネル",
-    "thumbnail": "/images/crosswalk.jpg"
+    "thumbnail": "/images/tunnel.jpg"
   },
   {
     "id": "kurodukaReport",
@@ -193,7 +193,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "六影真導会",
-    "thumbnail": "/images/file.jpg"
+    "thumbnail": "/images/kyouso.jpg"
   },
   {
     "id": "residentsCharts",
