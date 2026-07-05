@@ -227,7 +227,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "13番目の扉",
-    "thumbnail": "/images/alarm.jpg"
+    "thumbnail": "/images/junkantyu.jpg"
   },
   {
     "id": "immortals",
@@ -251,7 +251,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "嚥下記録",
-    "thumbnail": "/images/stairs.jpg"
+    "thumbnail": "/images/kurodukaTika.jpg"
   },
   {
     "id": "thresholdConduit",
@@ -263,7 +263,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "三焦病棟",
-    "thumbnail": "/images/video.jpg"
+    "thumbnail": "/images/enter.jpg"
   },
   {
     "id": 25,
