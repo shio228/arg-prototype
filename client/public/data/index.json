@@ -83,7 +83,7 @@
     "authorId": "ULS001",
     "views": 0,
     "recommended": false,
-    "thumbnail": "/images/tasukete.jpg"
+    "thumbnail": ""
   },
   {
     "id": "surveyList",
@@ -137,7 +137,7 @@
     "authorId": "ruinToMeguru",
     "views": 0,
     "recommended": false,
-    "thumbnail": "/images/recorder.jpg"
+    "thumbnail": ""
   },
   {
     "id": 14,
@@ -147,7 +147,7 @@
     "authorId": "ruinToMeguru",
     "views": 0,
     "recommended": false,
-    "thumbnail": "/images/kurodukaEntrance.jpg"
+    "thumbnail": ""
   },
   {
     "id": "GATE",
@@ -157,7 +157,7 @@
     "authorId": "ULS000",
     "views": 6666,
     "recommended": true,
-    "thumbnail": "/images/login.jpg"
+    "thumbnail": ""
   },
   {
     "id": "oldViscera",
@@ -169,7 +169,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "旧腑",
-    "thumbnail": "/images/tabs.jpg"
+    "thumbnail": ""
   },
   {
     "id": "praiseTheCircle",
@@ -181,7 +181,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "",
-    "thumbnail": "/images/clock.jpg"
+    "thumbnail": ""
   },
   {
     "id": "6ShadowTruth",
@@ -215,7 +215,7 @@
     "authorId": "ULS000",
     "views": 0,
     "recommended": false,
-    "thumbnail": "/images/intersection.jpg"
+    "thumbnail": ""
   },
   {
     "id": "border",
@@ -239,7 +239,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "内部循環中",
-    "thumbnail": "/images/reports.jpg"
+    "thumbnail": ""
   },
   {
     "id": "swallowRecord",
@@ -263,7 +263,7 @@
     "recommended": false,
     "hidden": true,
     "searchKeyword": "三焦病棟",
-    "thumbnail": "/images/enter.jpg"
+    "thumbnail": ""
   },
   {
     "id": 25,
