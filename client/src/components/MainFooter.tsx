@@ -43,6 +43,7 @@ export default function Footer() {
         </div>
 
         <p className="text-center text-sm text-neutral-500">&copy; 2016. All rights reserved.</p>
+        <p className="text-center text-sm text-neutral-500">※本サイトはフィクションです。実在する人物・団体とは一切関係ありません。</p>
       </div>
     </footer>
   );
