@@ -1,3 +1,5 @@
+import { trackEvent } from '@/lib/analytics';
+
 const SITE_URL = 'https://note.com/shio_salty/n/n14d9449b5264';
 
 function buildShareUrl(text: string, hashtags: string[]) {
@@ -11,6 +13,7 @@ function buildShareUrl(text: string, hashtags: string[]) {
 
 export default function ShareToX() {
   const handleShare = () => {
+    trackEvent('share-x');
     const shareUrl = buildShareUrl(
       '都市伝説愛好会の仲間になれました！',
       ['都市伝説愛好会ARG', 'ARG'],

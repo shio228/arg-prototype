@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { verifyUser } from '@/lib/auth';
 import { getArticles } from '@/lib/api';
+import { trackEvent } from '@/lib/analytics';
 
 interface Author {
   id: string;
@@ -37,6 +38,8 @@ function LoginDialog({ open, onClose, onLoginSuccess }: LoginDialogProps) {
       setError('IDまたはパスワードが正しくありません。パスワードは英数小文字、8文字以上で入力してください');
       return;
     }
+
+    trackEvent('login', { userId: id });
 
     // 著者情報取得
     const authorsRes = await fetch('/data/authors.json');
@@ -128,6 +131,8 @@ function RegisterDialog({ open, onClose, onRegisterSuccess }: RegisterDialogProp
       setError('合言葉が正しくありません。');
       return;
     }
+
+    trackEvent('game_clear');
 
     const author: Author = { id: 'OUROBOROS0000', name: username };
     onRegisterSuccess(author);
