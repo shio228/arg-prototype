@@ -1,4 +1,4 @@
-import { useRoute } from "wouter";
+import { useRoute, useLocation } from "wouter";
 import { useEffect, useState } from "react";
 import { getArticle, getRecentArticles, getDraftArticles } from "../lib/api";
 import ReactMarkdown from "react-markdown";
@@ -6,6 +6,9 @@ import ShareToX from "../components/ShareToX";
 
 const SESSION_KEY = 'loggedInAuthorId';
 const SESSION_DATE_KEY = 'registeredDate';
+
+// 合言葉登録済みユーザーのみ閲覧できる記事ID
+const RESTRICTED_IDS = ['25', '26'];
 
 const displayDate = (date: string) =>
   date || sessionStorage.getItem(SESSION_DATE_KEY) || '';
@@ -19,6 +22,14 @@ export default function Article() {
   const [draftArticles, setDraftArticles] = useState<any[]>([]);
   const [loggedInAuthorId, setLoggedInAuthorId] = useState<string | null>(sessionStorage.getItem(SESSION_KEY));
   const [prevHidden, setPrevHidden] = useState(() => sessionStorage.getItem('lastArticleHidden') === 'true');
+  const [, navigate] = useLocation();
+
+  // 制限記事は合言葉登録済みユーザー以外404へ
+  const blocked = RESTRICTED_IDS.includes(id) && loggedInAuthorId !== 'OUROBOROS0000';
+
+  useEffect(() => {
+    if (blocked) navigate('/404', { replace: true });
+  }, [blocked, navigate]);
 
   useEffect(() => {
     const handler = () => setLoggedInAuthorId(sessionStorage.getItem(SESSION_KEY));
@@ -27,6 +38,7 @@ export default function Article() {
   }, []);
 
   useEffect(() => {
+    if (blocked) return;
     getArticle(id).then((articleData) => {
       setPrevHidden(!!articleData.hidden);
       sessionStorage.setItem('lastArticleHidden', String(!!articleData.hidden));
@@ -39,7 +51,7 @@ export default function Article() {
         setDraftArticles([]);
       }
     });
-  }, [id]);
+  }, [id, blocked]);
 
   const [imageOpen, setImageOpen] = useState(false);
 
