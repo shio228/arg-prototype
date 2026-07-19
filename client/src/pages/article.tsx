@@ -2,6 +2,7 @@ import { useRoute } from "wouter";
 import { useEffect, useState } from "react";
 import { getArticle, getRecentArticles, getDraftArticles } from "../lib/api";
 import ReactMarkdown from "react-markdown";
+import ShareToX from "../components/ShareToX";
 
 const SESSION_KEY = 'loggedInAuthorId';
 const SESSION_DATE_KEY = 'registeredDate';
@@ -139,6 +140,13 @@ export default function Article() {
                   <span className="text-xs text-muted-foreground shrink-0">{displayDate(a.date)}</span>
                 </div>
               ))}
+            </section>
+          )}
+
+          {/* Xへの共有（合言葉で登録したユーザーのみ） */}
+          {loggedInAuthorId === 'OUROBOROS0000' && (
+            <section className="mt-6">
+              <ShareToX />
             </section>
           )}
         </aside>
