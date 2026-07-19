@@ -123,11 +123,20 @@ function RegisterDialog({ open, onClose, onRegisterSuccess }: RegisterDialogProp
     e.preventDefault();
     setError('');
 
+    if (username.length > 16) {
+      setError('ユーザー名は16文字以内で入力してください。');
+      return;
+    }
     if (password !== confirm) {
       setError('パスワードが一致しません。');
       return;
     }
-    if (passphrase !== 'OUROBOROS') {
+    // 表記ゆれを吸収：前後の空白除去、全角英字→半角、大文字化してから比較
+    const normalizedPassphrase = passphrase
+      .trim()
+      .replace(/[Ａ-Ｚａ-ｚ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
+      .toUpperCase();
+    if (normalizedPassphrase !== 'OUROBOROS') {
       setError('合言葉が正しくありません。');
       return;
     }
@@ -156,9 +165,10 @@ function RegisterDialog({ open, onClose, onRegisterSuccess }: RegisterDialogProp
             <Input
               id="reg-username"
               type="text"
-              placeholder="ユーザー名"
+              placeholder="ユーザー名（16文字まで）"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              maxLength={16}
               required
             />
           </div>
