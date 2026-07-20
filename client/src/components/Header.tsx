@@ -35,7 +35,7 @@ function LoginDialog({ open, onClose, onLoginSuccess }: LoginDialogProps) {
     setLoading(false);
 
     if (!ok) {
-      setError('IDまたはパスワードが正しくありません。パスワードは英数小文字、8文字以上で入力してください');
+      setError('IDまたはパスワードが正しくありません。パスワードは英数字、7文字以上で入力してください');
       return;
     }
 
