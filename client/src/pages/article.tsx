@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { getArticle, getRecentArticles, getDraftArticles } from "../lib/api";
 import ReactMarkdown from "react-markdown";
 import ShareToX from "../components/ShareToX";
+import { trackEvent } from "../lib/analytics";
 
 const SESSION_KEY = 'loggedInAuthorId';
 const SESSION_DATE_KEY = 'registeredDate';
@@ -157,8 +158,17 @@ export default function Article() {
 
           {/* Xへの共有（合言葉で登録したユーザーのみ） */}
           {loggedInAuthorId === 'OUROBOROS0000' && (
-            <section className="mt-6">
+            <section className="mt-6 space-y-3">
               <ShareToX />
+              <a
+                href="https://sim3.net/portal/clear/#bdd8a87dd3324413888e29eae0977699"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent('sim3-clear')}
+                className="inline-block px-6 py-2 rounded-full bg-red-500 text-white text-sm hover:bg-red-600"
+              >
+                クリア実績を登録する
+              </a>
             </section>
           )}
         </aside>
